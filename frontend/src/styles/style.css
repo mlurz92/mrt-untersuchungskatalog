@@ -1,0 +1,137 @@
+/* Basisstyles inkl. dunkles Farbschema, Roboto-Schrift, flüssige Übergänge */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Navigation */
+.navigation-container {
+  width: 250px;
+  background-color: #1e1e1e;
+  border-right: 1px solid #333;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-list li {
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.nav-list li:hover {
+  background-color: #333;
+}
+
+/* Hauptbereich */
+.main-container {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.placeholder {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Protokolltabelle */
+.protocol-table {
+  background-color: #1e1e1e;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.protocol-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.edit-button {
+  background-color: #3a3a3a;
+  color: #e0e0e0;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.edit-button:hover {
+  background-color: #555;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  padding: 0.5rem;
+  border: 1px solid #333;
+  text-align: left;
+}
+
+/* Bearbeitungsoverlay */
+.edit-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(18, 18, 18, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.overlay-content {
+  background-color: #1e1e1e;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 800px;
+}
+
+.overlay-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #3a3a3a;
+  color: #e0e0e0;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+/* Zusätzliche Styles für Drag & Drop (react-beautiful-dnd) */
+.react-beautiful-dnd-draggable--dragging {
+  background-color: #333 !important;
+  transition: background-color 0.2s;
+}

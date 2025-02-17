@@ -1,0 +1,3842 @@
+[
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "Standard",
+    "program": "Standard",
+    "protocol": "nativ",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "t2_tse_sag_3mm",
+      "ep2d_diff_4scan_trace_p2_s2_2mm",
+      "t2_tse_dark-fluid_tra_4mm",
+      "t1_mprage_sag_we",
+      "t2_swi_tra_p2"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "Standard",
+    "program": "Standard",
+    "protocol": "KM",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "t2_tse_sag_3mm",
+      "ep2d_diff_4scan_trace_p2_s2_2mm",
+      "t2_tse_dark-fluid_tra_4mm",
+      "t1_mprage_sag_we_KM",
+      "T1_space_sag_fs_black-blood_KM"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "Standard",
+    "program": "Standard",
+    "protocol": "Unkooperativ",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "ep2d_diff_4scan_trace_p2_s2_2mm",
+      "t2_blade_dark-fluid_tra_p2",
+      "t1_fl2d_tra_p2",
+      "t2_blade_tra_p2",
+      "t1_fl2d_tra_p2 KM",
+      "t1_fl2d_cor_p2 KM",
+      "t1_fl2d_sag_p2 KM"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "Stroke",
+    "program": "Stroke",
+    "protocol": "Standard",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "ep2d_diff_4scan_trace_p2_s2_2mm",
+      "t2_tse_dark-fluid_tra_3mm",
+      "ep2d_diff_cor_resolve_3scan_trace_Hirnstamm",
+      "t2_swi_tra_p2"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "Stroke",
+    "program": "Stroke",
+    "protocol": "Gefäßdarstellung",
+    "sequenceArray": [
+      "localizer_Hals_F120",
+      "vessel_scout_head",
+      "test_bolus_tra",
+      "angio_fl3d_cor_nativ",
+      "angio_fl3d_cor_p3_KM",
+      "tof_fl3d_tra"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "Stroke",
+    "program": "Stroke",
+    "protocol": "TGA",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "3D_space_darkfluid_tra_c4",
+      "ep2d_diff_cor_resolve_1.5mm_Hippocampus"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "Dissektion",
+    "program": "Dissektion",
+    "protocol": "Standard",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "ep2d_diff_4scan_trace_p2_s2_2mm",
+      "t2_tse_dark-fluid_tra_4mm",
+      "t2_tse_sag_3mm",
+      "t2_swi_tra_p2",
+      "localizer_F120",
+      "ep2d_diff_cor_resolve_3scan_trace_Hirnstamm",
+      "pd_tse_fs_tra_oben",
+      "pd_tse_fs_tra_unten",
+      "t1_tse_fs_tra oben",
+      "t1_tse_fs_tra unten"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "Dissektion",
+    "program": "Gefäßdarstellung",
+    "protocol": "Testbolus",
+    "sequenceArray": [
+      "vessel_scout_head",
+      "angio_fl3d_cor_nativ",
+      "test_bolus_tra",
+      "angio_fl3d_cor_p3_KM"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "Dissektion",
+    "program": "Gefäßdarstellung",
+    "protocol": "Carebolus",
+    "sequenceArray": [
+      "vessel_scout_head",
+      "angio_fl3d_cor_nativ",
+      "care_bolus_cor",
+      "angio_fl3d_cor_p3_KM"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "Sinusthrombose",
+    "program": "Standard",
+    "protocol": "Sinusthrombose",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "t2_tse_dark-fluid_tra_3mm",
+      "t2_tse_sag_3mm",
+      "t2_swi_tra_p2",
+      "t2_swi_cor_p2",
+      "ep2d_diff_4scan_trace_p2_s2_2mm",
+      "t1_mprage_sag_we",
+      "flow_pc3d_sag_W"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "AVM",
+    "program": "Standard",
+    "protocol": "AVM",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "t2_space_sag_iso 0.9",
+      "t1_mprage_sag_we",
+      "ep2d_diff_4scan_trace_p2_s2_2mm",
+      "tof_fl3d_tra",
+      "t2_swi_tra_p2",
+      "t1_mprage_sag_we_KM"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "Aneurysma",
+    "program": "Z.n. Coiling/Clipping",
+    "protocol": "Aneurysma ToF",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "t2_tse_sag_3mm",
+      "t2_tse_dark-fluid_tra_4mm",
+      "t2_swi_tra_p2",
+      "ep2d_diff_4scan_trace_p2_s2_2mm",
+      "tof_fl3d_tra_0.5mm"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "Aneurysma",
+    "program": "Z.n. Coiling/Clipping",
+    "protocol": "B",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "t2_tse_sag_3mm",
+      "t2_tse_dark-fluid_tra_4mm",
+      "t2_swi_tra_p2",
+      "ep2d_diff_4scan_trace_p2_s2_2mm",
+      "localizer_F100",
+      "vessel_scout_head",
+      "test_bolus_tra",
+      "angio_fl3d_cor_nativ",
+      "angio_fl3d_cor_p3_KM"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "Entzündung",
+    "program": "Standard",
+    "protocol": "Entzündung",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "t2_tse_dark-fluid_tra_4mm",
+      "3D_space_darkfluid_tra_c4",
+      "ep2d_diff_4scan_trace_p2_s2_2mm",
+      "t2_swi_tra_p2",
+      "t1_mprage_sag",
+      "t2_tse_sag_3mm",
+      "t1_mprage_sag_KM",
+      "T1_space_sag_fs_black-blood_KM",
+      "t2_tse_dark-fluid_cor KM"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "MS",
+    "program": "Kopf",
+    "protocol": "MS Kopf mit KM",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "3D_T2_Dark-Fluid_tra",
+      "t1_mprage_sag",
+      "t2_tse_sag_3mm",
+      "ep2d_diff_4scan_trace_p2_s2_2mm",
+      "t2_swi_tra_p2",
+      "T2_space_SPAIR_cor",
+      "T1_space_sag_fs_black-blood_KM",
+      "t1_mprage_sag_KM"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "MS",
+    "program": "Kopf",
+    "protocol": "MS Kopf nativ",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "3D_T2_Dark-Fluid_tra",
+      "t1_mprage_sag",
+      "t2_tse_sag_3mm",
+      "ep2d_diff_4scan_trace_p2_s2_2mm",
+      "t2_swi_tra_p2"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "MS",
+    "program": "Schädel + Wirbelsäule",
+    "protocol": "MS Schädel und Wirbelsäule",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "I_AASpine_Scout",
+      "II_AASpine_Scout",
+      "III_AASpine_Scout",
+      "3D_T2_Dark-Fluid_tra",
+      "t1_mprage_sag",
+      "t1_tse_sag_WS",
+      "ep2d_diff_4scan_trace_p2_s2_2mm",
+      "t2_tse_sag_3mm",
+      "t2_tse_sag_WS",
+      "t1_tse_sag_KM_WS",
+      "T1_space_sag_fs_black-blood_KM",
+      "t2_tse_tra_HWS",
+      "t2_tse_stir_sag_WS"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "Epilepsie",
+    "program": "Standard",
+    "protocol": "Epilepsie",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "3D_T2_Dark-Fluid_tra",
+      "ep2d_diff_4scan_trace_p2_s2_2mm",
+      "t1_mprage_sag_we",
+      "t2_tse_sag_3mm",
+      "t2_swi_tra_p2",
+      "t2_tse_cor_Temporal_3mm",
+      "t1_mprage_sag_we KM"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "Neurodegeneration",
+    "program": "Standard",
+    "protocol": "Neurodegeneration",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "3D_space_darkfluid_tra_c4",
+      "ep2d_diff_4scan_trace_p2_s2_2mm",
+      "t1_mprage_tra_p2_iso",
+      "t2_tse_cor_Temporal_3mm",
+      "t2_swi_tra_p2"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "Kopfschmerz Migräne",
+    "program": "Standard",
+    "protocol": "Kopfschmerz Migräne",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "ep2d_diff_4scan_trace_p2_s2_2mm",
+      "t2_tse_dark-fluid_tra_3mm",
+      "3D_space_darkfluid_tra_c4",
+      "t2_tse_sag_3mm",
+      "t1_mprage_sag",
+      "t2_swi_tra_p2"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "Vaskulitis",
+    "program": "Standard",
+    "protocol": "Vaskulitis",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "ep2d_diff_4scan_trace_p2_s2_2mm",
+      "3D_space_darkfluid_tra_c4",
+      "t2_swi_tra_p2",
+      "t1_mprage_sag",
+      "tof_fl3d_tra",
+      "t2_tse_sag_3mm",
+      "t1_mprage_sag_KM",
+      "T1_space_sag_fs_black-blood_KM"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "Arteriitis Temporalis",
+    "program": "Stamdard",
+    "protocol": "RZA",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "3D_space_darkfluid_tra",
+      "T1_space_fs_black-blood_cor",
+      "t2_space_sag_iso",
+      "t2_swi_tra_p2",
+      "ep2d_diff_4scan_trace_p2_s2_2mm",
+      "t1_mprage_sag_KM",
+      "T1_space_fs_black-blood_cor_KM"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "Trauma",
+    "program": "Trauma",
+    "protocol": "Standard",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "t2_tse_dark-fluid_tra_4mm",
+      "ep2d_diff_4scan_trace_p2_s2_2mm",
+      "t2_swi_tra_p2",
+      "t2_swi_cor_p2",
+      "t1_se_17rb130_cor",
+      "t2_tse_sag_3mm"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "KHBW",
+    "program": "Standard",
+    "protocol": "KHBW",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "t2_haste_cor (Planung)",
+      "t2_tse_dark-fluid_tra_4mm",
+      "ep2d_diff_4scan_trace_p2_s2_2mm",
+      "T2_space_tra_c4_IAC_s",
+      "t1_tse_r_tra_1.5mm",
+      "t2_tse_sag_3mm",
+      "t1_tse_r_tra_1.5mm",
+      "T1_space_cor_fs_black-blood"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "Wernicke Enzephalitis",
+    "program": "Standard",
+    "protocol": "Wernicke Enzephalopathie",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "3D_space_darkfluid_tra",
+      "t1_mprage_sag",
+      "t2_swi_tra_p2",
+      "ep2d_diff_4scan_trace_p2_s2_2mm",
+      "t2_tse_sag_3mm",
+      "t1_mprage_sag_KM"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "Hypophyse",
+    "program": "Standard",
+    "protocol": "Mikroadenom",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "t1_tse_sag_p2_2mm",
+      "t2_tse_dark-fluid_tra_3mm",
+      "t2_tse_sag_3mm",
+      "t1_tse_cor_2mm",
+      "ep2d_diff_4scan_trace_p2_s2_2mm",
+      "t1_tse_cor_2mm_dynamic",
+      "t1_tse_cor_2mm KM",
+      "t1_tse_sag_p2_2mm KM",
+      "T1_space_sag_c4_black-blood",
+      "t1_mprage_sag_we"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "Hypophyse",
+    "program": "Standard",
+    "protocol": "Makroadenom",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "t1_tse_sag_p2_2mm",
+      "t2_tse_dark-fluid_tra_3mm",
+      "t2_tse_sag_3mm",
+      "t1_tse_cor_2mm",
+      "ep2d_diff_4scan_trace_p2_s2_2mm",
+      "t1_tse_cor_2mm KM",
+      "t1_tse_sag_p2_2mm KM",
+      "T1_space_sag_c4_black-blood",
+      "t1_mprage_sag_we"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "Orbita",
+    "program": "Standard",
+    "protocol": "Orbita",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "t2_tse_dark-fluid_tra_4mm",
+      "t2_tse_fs_cor_2mm_Orbita",
+      "t1_tse_tra_2mm_Orbita",
+      "t1_tse_cor_2mm_Orbita",
+      "t2_tse_sag_3mm",
+      "t1_tse_tra_fs_2mm_Orbita",
+      "t1_tse_cor_fs_2mm_Orbita",
+      "t1_se_17rb130_tra"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "Hirntumor",
+    "program": "Erstdiagnostik",
+    "protocol": "Standard",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "t1_mprage_sag",
+      "t2_tse_dark-fluid_tra_4mm",
+      "t2_swi_tra_p2",
+      "ep2d_diff_4scan_trace_p2_s2_2mm",
+      "ep2d_perf_p2",
+      "t2_tse_sag_3mm",
+      "t1_mprage_sag_KM",
+      "T1_space_sag_fs_black-blood_KM",
+      "csi_slaser_135",
+      "svs_se_135"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "Hirntumor",
+    "program": "Standard",
+    "protocol": "Standard",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "ep2d_diff_4scan_trace_p2_s2_2mm",
+      "t2_tse_dark-fluid_tra_4mm",
+      "t1_mprage_sag",
+      "t2_tse_sag_3mm",
+      "t1_mprage_sag_KM",
+      "T1_space_sag_spair_black-blood_KM",
+      "csi_slaser_135",
+      "t2_swi_tra_p2"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "Hirntumor",
+    "program": "Standard",
+    "protocol": "Unkooperativ",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "ep2d_diff_4scan_trace_p2_s2_2mm",
+      "t2_blade_dark-fluid_tra_p2",
+      "t1_fl2d_tra_p2",
+      "t2_blade_tra_p2",
+      "t1_fl2d_tra_p2 KM",
+      "t1_fl2d_cor_p2 KM",
+      "t1_fl2d_sag_p2 KM",
+      "t2_haste_tra_p2",
+      "t2_blade_tra_p2"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "Hirntumor",
+    "program": "Erstdiagnostik",
+    "protocol": "Erstdiagnostik mit Navi",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "t1_mprage_sag",
+      "t2_space_sag_iso 0.9",
+      "DKI_BIPOLAR_2.5mm_64dir",
+      "DKI_BIPOLAR_2.5mm_64dir_topup_PA",
+      "t2_tse_dark-fluid_tra_4mm",
+      "t2_swi_tra_p2",
+      "ep2d_diff_4scan_trace_p2_s2_2mm",
+      "ep2d_perf_p2",
+      "t1_mprage_sag_KM",
+      "T1_space_sag_fs_black-blood_KM",
+      "csi_slaser_135",
+      "svs_se_135"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "Hirntumor",
+    "program": "Post-OP",
+    "protocol": "Früh-MRT",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "t1_mprage_sag",
+      "t2_tse_dark-fluid_tra_4mm",
+      "ep2d_diff_4scan_trace_p2_s2_2mm",
+      "t2_swi_tra_p2",
+      "t1_mprage_sag_KM"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "Hirntumor",
+    "program": "Post-OP",
+    "protocol": "Verlauf",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "t1_mprage_sag",
+      "t2_tse_dark-fluid_tra_4mm",
+      "ep2d_diff_4scan_trace_p2_s2_2mm",
+      "ep2d_perf_p2",
+      "t2_tse_sag_3mm",
+      "t1_mprage_sag_KM",
+      "T1_space_sag_fs_black-blood_KM"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "Neuro-Navigation",
+    "program": "Navigationsplanung",
+    "protocol": "Navi",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "t2_space_sag_iso 0.9",
+      "ep2d_diff_4scan_trace_p2_s2_2mm",
+      "DKI_BIPOLAR_2.5mm_64dir",
+      "DKI_BIPOLAR_2.5mm_64dir_topup_PA",
+      "ep2d_diff_mddw_64_s4",
+      "t1_mprage_sag_we"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "Neuro-Navigation",
+    "program": "Fiber-Tracking",
+    "protocol": "DTI",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "t1_mprage_tra_p2_iso",
+      "ep2d_diff_mddw_64_s4_AP",
+      "ep2d_diff_mddw_64_s4_PA"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "funktionelle MRT",
+    "program": "fMRT",
+    "protocol": "Finger-Tap + Fiber-Tracking",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "t1_mprage_sag_p2_iso",
+      "gre_field_mapping",
+      "ep2d_pace_moco_p2_re_Hand",
+      "ep2d_pace_moco_p2_li_hand",
+      "ep2d_diff_mddw_64_s4",
+      "ep2d_diff_mddw_30_p2_s2",
+      "ep2d_diff_mddw_20_p2_s2",
+      "ep2d_diff_mddw_12_p2_s2",
+      "DKI_BIPOLAR_2.5mm_64dir",
+      "DKI_BIPOLAR_2.5mm_64dir_topup_PA"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "Spektroskopie",
+    "program": "Single-Voxel",
+    "protocol": "SVS",
+    "sequenceArray": [
+      "localizer",
+      "localizer_5@center",
+      "t1_mprage_sag_p2",
+      "svs_se_30",
+      "svs_se_135",
+      "svs_se_270",
+      "svs_st_20",
+      "svs_st_135",
+      "svs_st_270"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "Spektroskopie",
+    "program": "Multi-Voxel",
+    "protocol": "CSI",
+    "sequenceArray": [
+      "localizer",
+      "localizer_5@center",
+      "loc_in-plane_csi@center",
+      "t1_mprage_sag_p2",
+      "csi_slaser_40",
+      "csi_slaser_135",
+      "csi_slaser_270",
+      "csi_se_30",
+      "csi_se_135",
+      "csi_se_270",
+      "csi_st_20"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "NNH",
+    "program": "Sinusitis",
+    "protocol": "Neu",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "t2_tse_tra_512_3mm",
+      "t2_tse_cor_512_3mm",
+      "t2_tse_dark-fluid_cor",
+      "t1_tse_tra_fs_3mm",
+      "resolve_4scan_trace_tra_p2_s2_224"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "NNH",
+    "program": "Sinusitis",
+    "protocol": "Alt",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "t2_haste_tra_p2",
+      "t2_haste_cor_p2",
+      "t1_tse_tra_fs_3mm",
+      "t2_tse_dark-fluid_cor"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "Kiefergelenke",
+    "program": "Kiefergelenke",
+    "protocol": "A",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "t2_tirm_cor_p3",
+      "t1_tse_tra_nur zum Planen",
+      "localizer_sag+cor+tra",
+      "t1_tse_sag",
+      "pd_tse_sag",
+      "t2_tse_fs_sag",
+      "localizer_sag+cor+tra",
+      "t2_tse_fs_sag_geöffneter Mund"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kopf",
+    "examEngine": "INTRAGO-Studie",
+    "program": "INTRAGO",
+    "protocol": "INTRAGO",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "t2_tse_dark-fluid_tra_3mm",
+      "ep2d_diff_4scan_trace_p2_s2_2mm",
+      "t1_mprage_tra_p2_iso",
+      "ep2d_diff_mddw_20_p2_s2_ap",
+      "ep2d_diff_mddw_20_p2_s2_pa",
+      "T2_space_sag_opt_c4",
+      "ep2d_perf_p2",
+      "t2_tse_tra_512_3mm",
+      "t1_mprage_tra_p2_iso_KM"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "HWS",
+    "program": "Degenerativ/Trauma/Ambulanz",
+    "protocol": "Degenerativ",
+    "sequenceArray": [
+      "AASpine_Scout",
+      "t2_tse_sag",
+      "T2_space_sag_c4",
+      "t1_tse_sag",
+      "t2_tse_tra",
+      "T2_space_tra_c4_s",
+      "t1_tse_tra"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "HWS",
+    "program": "Degenerativ/Trauma/Ambulanz",
+    "protocol": "Trauma",
+    "sequenceArray": [
+      "AASpine_Scout",
+      "t2_tirm_sag_p2",
+      "t1_tse_sag",
+      "t2_tse_tra",
+      "T2_space_tra_c4_s"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "HWS",
+    "program": "Degenerativ/Trauma/Ambulanz",
+    "protocol": "Ambulanz",
+    "sequenceArray": [
+      "AASpine_Scout",
+      "t2_RARE_sag",
+      "t2_RARE_cor",
+      "t2_tse_sag",
+      "t1_tse_sag",
+      "t2_tirm_sag_p2",
+      "t2_tse_tra",
+      "T2_space_tra_c4_s",
+      "t1_tse_tra"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "HWS",
+    "program": "Degenerativ/Trauma/Ambulanz",
+    "protocol": "Metall",
+    "sequenceArray": [
+      "AASpine_Scout",
+      "t2_tse_sag_WARP",
+      "t1_tse_sag_WARP",
+      "t2_tirm_sag_WARP",
+      "t2_tse_tra_WARP",
+      "t1_tse_tra_WARP",
+      "t2_tirm_cor_WARP"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "HWS",
+    "program": "Tumor/Entzündung/Blutung",
+    "protocol": "Tumor",
+    "sequenceArray": [
+      "AASpine_Scout",
+      "t2_RARE_sag",
+      "t2_RARE_cor",
+      "t2_tse_sag",
+      "t2_tirm_sag_p2",
+      "t1_tse_sag",
+      "t2_tse_tra",
+      "t1_tse_sag_fs",
+      "t1_tse_tra_fs",
+      "t1_tse_tra"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "HWS",
+    "program": "Tumor/Entzündung/Blutung",
+    "protocol": "MS/Entzündung",
+    "sequenceArray": [
+      "AASpine_Scout",
+      "t2_tse_sag",
+      "pd_tse_sag",
+      "t1_tse_sag",
+      "t2_tse_tra",
+      "t1_tse_sag",
+      "t1_tse_tra"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "HWS",
+    "program": "Tumor/Entzündung/Blutung",
+    "protocol": "Blutung",
+    "sequenceArray": [
+      "AASpine_Scout",
+      "t2_RARE_sag",
+      "t2_RARE_cor",
+      "t2_tse_sag",
+      "t2_fl2d_sag_hemo",
+      "t1_tse_sag",
+      "t2_tse_tra",
+      "t1_tse_tra"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "HWS",
+    "program": "Plexus Brachialis",
+    "protocol": "TSE",
+    "sequenceArray": [
+      "AASpine_Scout",
+      "T2_space_sag_c4",
+      "T2_space_tra_c4_s",
+      "t2_tse_stir_cor_p2_384",
+      "t1_tse_cor_p2_384",
+      "t2_tse_tra_sättiger",
+      "t1_tse_tra_sättiger",
+      "t1_tse_schräg-tra_sättiger",
+      "t2_tse_schräg_tra_sättiger",
+      "t1_vibe_dixon_cor_iso",
+      "t1_tse_fs_tra_sättiger"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "HWS",
+    "program": "Plexus Brachialis",
+    "protocol": "Dixon",
+    "sequenceArray": [
+      "AASpine_Scout",
+      "T2_space_sag_c4_HWS",
+      "t2_tse_dixon_cor",
+      "T2_space_tra_c4_s",
+      "t1_tse_cor_p2_384",
+      "t2_tse_dixon_paratra_384",
+      "t2_tse_dixon_sag",
+      "t1_vibe_dixon_cor_iso"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "HWS",
+    "program": "Zusätze",
+    "protocol": "Zusatzsequenzen",
+    "sequenceArray": [
+      "T2_space_sag_c4",
+      "T2_space_tra_c4",
+      "resolve_3scan_trace_sag",
+      "t2_fl2d_sag_hemo",
+      "test_bolus_tra",
+      "angio_fl3d_sag_nativ",
+      "angio_fl3d_sag_KM"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "HWS",
+    "program": "FAST",
+    "protocol": "Standard",
+    "sequenceArray": [
+      "AASpine_Scout",
+      "t2_tse_sag_f",
+      "t2_tse_tra_f",
+      "t2_tse_stir_sag_f",
+      "t1_tse_sag_f"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "BWS",
+    "program": "Degenerativ/Trauma/Ambulanz",
+    "protocol": "A",
+    "sequenceArray": [
+      "I_AASpine_Scout",
+      "II_AASpine_Scout",
+      "III_AASpine_Scout",
+      "t2_RARE_sag",
+      "t2_RARE_cor",
+      "t1_tse_sag",
+      "t2_tse_sag",
+      "t2_tse_tra",
+      "T2_space_tra_c4_s",
+      "t1_tse_tra"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "BWS",
+    "program": "Degenerativ/Trauma/Ambulanz",
+    "protocol": "B",
+    "sequenceArray": [
+      "I_AASpine_Scout",
+      "II_AASpine_Scout",
+      "III_AASpine_Scout",
+      "t2_RARE_sag",
+      "t2_RARE_cor",
+      "t2_tirm_sag",
+      "t2_tse_tra",
+      "T2_space_tra_c4_s",
+      "t1_tse_tra"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "BWS",
+    "program": "Degenerativ/Trauma/Ambulanz",
+    "protocol": "C",
+    "sequenceArray": [
+      "I_AASpine_Scout",
+      "II_AASpine_Scout",
+      "III_AASpine_Scout",
+      "t2_RARE_sag",
+      "t2_RARE_cor",
+      "t2_tirm_sag",
+      "t1_tse_sag",
+      "t2_tse_sag",
+      "t2_tse_tra",
+      "T2_space_tra_c4_s",
+      "t1_tse_tra"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "BWS",
+    "program": "Degenerativ/Trauma/Ambulanz",
+    "protocol": "D",
+    "sequenceArray": [
+      "I_AASpine_Scout",
+      "II_AASpine_Scout",
+      "III_AASpine_Scout",
+      "t2_RARE_sag",
+      "t2_RARE_cor",
+      "t2_tirm_sag_WARP",
+      "t1_tse_sag_WARP",
+      "t2_tse_sag_WARP",
+      "t2_tse_tra_WARP",
+      "t1_tse_tra"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "BWS",
+    "program": "Tumor/Entzündung/Blutung",
+    "protocol": "A",
+    "sequenceArray": [
+      "I_AASpine_Scout",
+      "II_AASpine_Scout",
+      "III_AASpine_Scout",
+      "t2_RARE_sag",
+      "t2_RARE_cor",
+      "t2_tse_sag",
+      "t2_tirm_sag",
+      "t1_tse_sag",
+      "t2_tse_tra",
+      "t1_tse_sag_fs",
+      "t1_tse_tra_fs",
+      "t2_tse_dixon_sag_p2_IN-OPP-F-W",
+      "t1_tse_tra",
+      "t2_tirm_cor"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "BWS",
+    "program": "Tumor/Entzündung/Blutung",
+    "protocol": "B",
+    "sequenceArray": [
+      "I_AASpine_Scout",
+      "II_AASpine_Scout",
+      "III_AASpine_Scout",
+      "t2_RARE_sag",
+      "t2_RARE_cor",
+      "t2_tse_sag",
+      "t1_tse_sag",
+      "t2_tse_tra",
+      "t1_tse_sag",
+      "t1_tse_tra",
+      "T2_space_tra_c4",
+      "t2_fl2d_sag_hemo",
+      "t1_tse_tra"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "BWS",
+    "program": "Tumor/Entzündung/Blutung",
+    "protocol": "C",
+    "sequenceArray": [
+      "I_AASpine_Scout",
+      "II_AASpine_Scout",
+      "III_AASpine_Scout",
+      "t2_RARE_sag",
+      "t2_RARE_cor",
+      "t2_fl2d_sag_hemo",
+      "t2_tse_sag",
+      "t1_tse_sag",
+      "t2_tse_tra",
+      "t1_tse_tra"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "BWS",
+    "program": "Zusätze",
+    "protocol": "A",
+    "sequenceArray": [
+      "resolve_3scan_trace_sag",
+      "ep2d_diff_sag_resolve_3scan_trace",
+      "t2_fl2d_sag_hemo",
+      "test_bolus_tra",
+      "angio_fl3d_sag_nativ",
+      "angio_fl3d_sag_KM"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "LWS",
+    "program": "Degenerativ/Trauma/Ambulanz",
+    "protocol": "A",
+    "sequenceArray": [
+      "AASpine_Scout",
+      "t2_RARE_sag",
+      "t2_RARE_cor",
+      "t2_tse_sag",
+      "T2_space_sag_c4",
+      "t1_tse_sag",
+      "t2_tse_tra",
+      "T2_space_tra_c4",
+      "t1_tse_tra"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "LWS",
+    "program": "Degenerativ/Trauma/Ambulanz",
+    "protocol": "B",
+    "sequenceArray": [
+      "AASpine_Scout",
+      "t2_RARE_sag",
+      "t2_RARE_cor",
+      "t2_tirm_sag",
+      "t2_tse_tra",
+      "T2_space_tra_c4",
+      "t1_tse_tra",
+      "t2_tse_sag",
+      "t2_tse_dixon_sag_p2_IN-OPP-F-W",
+      "t1_tse_sag"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "LWS",
+    "program": "Degenerativ/Trauma/Ambulanz",
+    "protocol": "C",
+    "sequenceArray": [
+      "AASpine_Scout",
+      "t2_RARE_sag",
+      "t2_RARE_cor",
+      "t2_tse_sag",
+      "t2_tirm_sag",
+      "t1_tse_sag",
+      "t2_tse_tra",
+      "T2_space_tra_c4",
+      "t1_tse_tra"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "LWS",
+    "program": "Degenerativ/Trauma/Ambulanz",
+    "protocol": "D",
+    "sequenceArray": [
+      "AASpine_Scout",
+      "t2_RARE_sag",
+      "t2_RARE_cor",
+      "t2_tse_sag_WARP",
+      "t2_tirm_sag_WARP",
+      "t1_tse_sag_WARP",
+      "t2_tse_tra_WARP",
+      "t1_tse_tra_WARP"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "LWS",
+    "program": "Tumor/Entzündung/Blutung",
+    "protocol": "A",
+    "sequenceArray": [
+      "AASpine_Scout",
+      "t2_RARE_sag",
+      "t2_RARE_cor",
+      "t2_tse_sag",
+      "t2_tirm_sag",
+      "t1_tse_sag",
+      "t2_tse_tra",
+      "t1_tse_sag_fs",
+      "t1_tse_tra_fs",
+      "T2_space_tra_c4",
+      "t2_fl2d_sag_hemo",
+      "t1_tse_tra",
+      "t2_tse_dixon_sag_p2_IN-OPP-F-W",
+      "t2_tirm_cor"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "LWS",
+    "program": "Tumor/Entzündung/Blutung",
+    "protocol": "B",
+    "sequenceArray": [
+      "AASpine_Scout",
+      "t2_RARE_sag",
+      "t2_RARE_cor",
+      "t2_tse_sag",
+      "t1_tse_sag",
+      "t2_tse_tra",
+      "t1_tse_sag",
+      "t1_tse_tra",
+      "T2_space_tra_c4",
+      "t2_fl2d_sag_hemo",
+      "t1_tse_tra"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "LWS",
+    "program": "Tumor/Entzündung/Blutung",
+    "protocol": "C",
+    "sequenceArray": [
+      "AASpine_Scout",
+      "t2_RARE_sag",
+      "t2_RARE_cor",
+      "t2_tse_sag",
+      "t2_fl2d_sag_hemo",
+      "t1_tse_sag",
+      "t2_tse_tra",
+      "t1_tse_tra",
+      "T2_space_tra_c4"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "LWS",
+    "program": "Zusätze",
+    "protocol": "A",
+    "sequenceArray": [
+      "t2_space_sag_p2_iso_myelo",
+      "resolve_3scan_trace_sag",
+      "t2_fl2d_sag_hemo",
+      "test_bolus_tra",
+      "angio_fl3d_sag_nativ",
+      "angio_fl3d_sag_KM"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "LWS",
+    "program": "Plexus Sacralis",
+    "protocol": "A",
+    "sequenceArray": [
+      "AASpine_Scout",
+      "STIR Sag Seite eingeben",
+      "T1 Sag Seite eingeben",
+      "t2_spc_stir_cor_p2_iso",
+      "t2_space_sag_p2_iso",
+      "T1 Ax",
+      "t2_haste_tra_p2_320_SPAIR",
+      "T1 vibe fs Post"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "LWS",
+    "program": "Alternativen",
+    "protocol": "A",
+    "sequenceArray": [
+      "t2_tirm_sag_p3_348",
+      "t2_tirm_sag_p3_448",
+      "t2_tirm_sag_p3_512",
+      "t1_tse_sag_fs",
+      "t1_tse_sag_p2_384",
+      "t2_space_sag_p2_iso",
+      "t1_vibe_sag",
+      "t1_vibe_tra_1mm",
+      "T2_space_tra_c4"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "LWS",
+    "program": "FAST",
+    "protocol": "A",
+    "sequenceArray": [
+      "AASpine_Scout",
+      "t2_tse_stir_sag",
+      "t2_tse_sag_fast",
+      "t2_tse_tra_fast",
+      "t1_tse_sag_fast"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "gesamte WS",
+    "program": "Tumor Entzündung",
+    "protocol": "Ossär",
+    "sequenceArray": [
+      "I_AASpine_Scout",
+      "II_AASpine_Scout",
+      "III_AASpine_Scout",
+      "t2_tse_sag",
+      "t2_tirm_sag",
+      "t1_tse_sag",
+      "t2_tse_tra",
+      "t1_tse_sag_fs",
+      "t1_tse_tra_fs"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "gesamte WS",
+    "program": "Tumor Entzündung",
+    "protocol": "Medullär",
+    "sequenceArray": [
+      "I_AASpine_Scout",
+      "II_AASpine_Scout",
+      "III_AASpine_Scout",
+      "t2_tse_sag",
+      "t1_tse_sag",
+      "t2_tirm_sag",
+      "t2_tse_tra",
+      "t1_tse_sag",
+      "t1_tse_tra"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "gesamte WS",
+    "program": "Tumor Entzündung",
+    "protocol": "Metall",
+    "sequenceArray": [
+      "I_AASpine_Scout",
+      "II_AASpine_Scout",
+      "III_AASpine_Scout",
+      "t2_tse_sag_WARP",
+      "t2_tirm_sag_WARP",
+      "t1_tse_sag_WARP",
+      "t1_tse_tra_WARP",
+      "t2_tse_tra_WARP",
+      "t1_tse_sag_WARP",
+      "t1_tse_tra_WARP"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "gesamte WS",
+    "program": "Trauma",
+    "protocol": "Trauma",
+    "sequenceArray": [
+      "I_AASpine_Scout",
+      "II_AASpine_Scout",
+      "III_AASpine_Scout",
+      "t2_tirm_sag",
+      "t1_tse_sag",
+      "t2_tse_tra"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "gesamte WS",
+    "program": "Liquorleck",
+    "protocol": "T2 FS",
+    "sequenceArray": [
+      "I_AASpine_Scout",
+      "II_AASpine_Scout",
+      "III_AASpine_Scout",
+      "T2_space_sag_c4_fs HBLWS",
+      "T2_space_tra_c4 HBWS FS",
+      "T2_space_tra_fs_c4 BLWS",
+      "ciss3d_sag_iso"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "gesamte WS",
+    "program": "Liquorleck",
+    "protocol": "T2 SPACE CISS",
+    "sequenceArray": [
+      "I_AASpine_Scout",
+      "II_AASpine_Scout",
+      "III_AASpine_Scout",
+      "ciss3d_sag_iso"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "gesamte WS",
+    "program": "Fast",
+    "protocol": "Trauma",
+    "sequenceArray": [
+      "I_AASpine_Scout",
+      "II_AASpine_Scout",
+      "III_AASpine_Scout",
+      "t2_tirm_sag",
+      "t2_tse_tra",
+      "t2_tse_tra_f"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "gesamte WS",
+    "program": "Fast",
+    "protocol": "Degenerativ",
+    "sequenceArray": [
+      "I_AASpine_Scout",
+      "II_AASpine_Scout",
+      "III_AASpine_Scout",
+      "t2_tse_sag_f",
+      "t1_tse_sag_f",
+      "t2_tse_tra",
+      "t2_tse_tra_f"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "gesamte WS",
+    "program": "Fast",
+    "protocol": "mit KM",
+    "sequenceArray": [
+      "I_AASpine_Scout",
+      "II_AASpine_Scout",
+      "III_AASpine_Scout",
+      "t2_tirm_sag",
+      "t2_tse_sag_f",
+      "t1_tse_sag_f",
+      "t2_tse_tra",
+      "t1_tse_sag_fs_f",
+      "t1_vibe_fs_tra_p4_KM"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Wirbelsäule",
+    "examEngine": "gesamte WS",
+    "program": "Liquorleck",
+    "protocol": "T2 SPACE",
+    "sequenceArray": [
+      "I_AASpine_Scout",
+      "II_AASpine_Scout",
+      "III_AASpine_Scout",
+      "t2_RARE_sag",
+      "t2_RARE_cor",
+      "T2_space_sag_c4 HBLWS"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Hals",
+    "examEngine": "Standard",
+    "program": "Pharynx/Larynx",
+    "protocol": "Standard",
+    "sequenceArray": [
+      "localizer *",
+      "t2_tirm_cor_p3 *",
+      "t1_tse_tra_p2_Tumorregion *",
+      "epi_diff_b50_b400_b800_tra *",
+      "t2_tse_tra_p2 *",
+      "t1_vibe_dixon_tra_iso *",
+      "t2_tse_sag *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Hals",
+    "examEngine": "Standard",
+    "program": "Parotis",
+    "protocol": "Standard",
+    "sequenceArray": [
+      "localizer *",
+      "t2_tirm_cor_p3 *",
+      "t1_tse_tra_p2_Tumorregion *",
+      "epi_diff_b50_b400_b800_tra *",
+      "t2_tse_sag *",
+      "t1_vibe_tra_dyn_fs *",
+      "t2_tse_tra_p2 *",
+      "t1_vibe_dixon_tra_iso *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Hals",
+    "examEngine": "Standard",
+    "program": "Parotis",
+    "protocol": "Parotis-Gang",
+    "sequenceArray": [
+      "T2_space_tra_Speicheldrüsen",
+      "t2_space_sag_p2 _ Speicheldrüse",
+      "t2_space_sag_p2 _ Speicheldrüse"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Hals",
+    "examEngine": "Standard",
+    "program": "Alternativen",
+    "protocol": "Alternativsequenzen",
+    "sequenceArray": [
+      "ep2d_diff_4scan_trace_p2_sms2",
+      "resolve_diff_b50_800_tra_p2",
+      "t1_vibe_dixon_cor_iso",
+      "t1_vibe_dixon_tra_p2",
+      "TEST_t2_tse_blade_sag",
+      "t1_starvibe_fs_cor",
+      "t1_starvibe_tra_fs",
+      "t2_blade_tra_p2",
+      "t1_blade_tra",
+      "t2_tirm_blade_cor"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Thorax",
+    "examEngine": "Thorax",
+    "program": "ges. Thorax",
+    "protocol": "Standard",
+    "sequenceArray": [
+      "localizer_freie Atmung *",
+      "t2_haste_cor_p3_mbh *",
+      "t2_haste_tra_p2_mbh_3mm *",
+      "t1_tse_cor_p2_mbh_384 *",
+      "t2_haste_stir_cor_p2_mbh_insp *",
+      "t1_vibe_dixon_cor_p6_bh_320_iso *",
+      "t1_vibe_dixon_tra_p4_320_bh_insp *",
+      "t1_starvibe_fs_tra_iso *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Thorax",
+    "examEngine": "Angio",
+    "program": "Embolie",
+    "protocol": "3-Phasen",
+    "sequenceArray": [
+      "localizer_insp *",
+      "t2_haste_cor_p3_mbh *",
+      "t2_haste_tra_p2_mbh_3mm *",
+      "test_bolus_tra in Truncus Y *",
+      "angio_fl3d_cor_p3_pre *",
+      "angio_fl3d_cor_p3_post_arterial *",
+      "angio_fl3d_cor_p3_post_venous *",
+      "t1_vibe_dixon_tra_p4_320_bh_insp *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Thorax",
+    "examEngine": "Angio",
+    "program": "Embolie",
+    "protocol": "TWIST",
+    "sequenceArray": [
+      "localizer_insp *",
+      "t2_haste_cor_p3_mbh *",
+      "t2_haste_tra_p2_mbh_3mm *",
+      "angio_twist_cor_epat6_iso_thorax *",
+      "t1_vibe_dixon_tra_p4_320_bh_insp *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Thorax",
+    "examEngine": "Angio",
+    "program": "PVI",
+    "protocol": "PVI",
+    "sequenceArray": [
+      "localizer_insp *",
+      "t2_trufi_tra_bh *",
+      "test_bolus_tra in li. Vorhof *",
+      "angio_fl3d_cor_p3_pre *",
+      "angio_fl3d_cor_p3_post_arterial *",
+      "t1_vibe_dixon_tra_p4_320_bh_insp *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Herz",
+    "examEngine": "Standard",
+    "program": "Standard",
+    "protocol": "A",
+    "sequenceArray": [
+      "trufi_loc_multi_iPAT *",
+      "trufi_loc_multi_iPAT@center+SHIM *",
+      "trufi_2-chamber_iPAT *",
+      "trufi_4-chamber_iPAT *",
+      "trufi_shortaxis_iPAT *",
+      "cine_tf2d13_retro_iPAT_10sl_shortaxis *",
+      "cine_tf2d12_retro_2-chamber *",
+      "cine_tf2d12_retro_4-chamber *",
+      "cine_tf2d12_retro_3-chamber *",
+      "optional_trufi_freqScout *",
+      "t1_tse_db_p3_shortaxis *",
+      "t2_tse_db_p3_shortaxis *",
+      "dynamic_test *",
+      "dynamic_stress *",
+      "dynamic_rest *",
+      "TI-Scout *",
+      "DE_overview_tfi_psir_10sl_shortaxis *",
+      "DE_high-res_tfl31_psir_seg_2-chamber *",
+      "DE_high-res_tfl31_psir_seg_4-chamber *",
+      "DE_high-res_tfl31_psir_seg_3-chamber *",
+      "DE_high-res_tfl31_psir_seg_shortaxis *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "MR-Angiographie",
+    "examEngine": "KM-Angiographie",
+    "program": "Carotis",
+    "protocol": "Testbolus",
+    "sequenceArray": [
+      "vessel_scout_neck",
+      "test_bolus_tra",
+      "angio_fl3d_cor_nativ",
+      "angio_fl3d_cor_p3_KM"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "MR-Angiographie",
+    "examEngine": "KM-Angiographie",
+    "program": "Carotis",
+    "protocol": "Carebolus",
+    "sequenceArray": [
+      "vessel_scout_neck",
+      "angio_fl3d_cor_nativ",
+      "care_bolus_cor",
+      "angio_fl3d_cor_p3_KM"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "MR-Angiographie",
+    "examEngine": "KM-Angiographie",
+    "program": "Aorta",
+    "protocol": "Testbolus",
+    "sequenceArray": [
+      "localizer",
+      "test_bolus_tra",
+      "angio_fl3d_cor_p3_pre",
+      "angio_fl3d_cor_p3_post_arterial",
+      "angio_fl3d_cor_p3_post_venous",
+      "angio_fl3d_cor_p3_post_equil.",
+      "t1_vibe_dixon_tra_p4_320_bh_insp"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "MR-Angiographie",
+    "examEngine": "KM-Angiographie",
+    "program": "Aorta",
+    "protocol": "Testbolus EKG - getriggert",
+    "sequenceArray": [
+      "test_bolus_cor",
+      "angio_fl3d_sag_aorta_ecg_nativ",
+      "angio_fl3d_sag_aorta_ecg_KM"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "MR-Angiographie",
+    "examEngine": "Aortitis",
+    "program": "Aortitis",
+    "protocol": "Test-Bolus",
+    "sequenceArray": [
+      "localizer *",
+      "t2_haste_cor_p3_mbh *",
+      "t2_haste_tra_p2_mbh *",
+      "t2_haste_cor_fs *",
+      "t1_vibe_dixon_tra_nativ *",
+      "test_bolus_tra *",
+      "angio_fl3d_cor_p3_pre *",
+      "angio_fl3d_cor_p3_post_arterial *",
+      "angio_fl3d_cor_p3_post_venous *",
+      "angio_fl3d_cor_p3_post_equil. *",
+      "t1_vibe_dixon_tra_KM *",
+      "T1_space_cor_fs_black-blood *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "MR-Angiographie",
+    "examEngine": "Aortitis",
+    "program": "Aortitis",
+    "protocol": "Dixon VIBE",
+    "sequenceArray": [
+      "tho_localizer *",
+      "abd_localizer *",
+      "pelv_localizer *",
+      "t2_haste_cor_p3_mbh_Th+ Abd *",
+      "t2_tse_fs_tra_p2_mbh_320 *",
+      "t1_vibe_dixon_cor_p6_bh_Tho+Abd *",
+      "t1_vibe_dixon_tra_KM *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "MR-Angiographie",
+    "examEngine": "KM-Angiographie",
+    "program": "Nieren",
+    "protocol": "Testbolus",
+    "sequenceArray": [
+      "test_bolus_tra",
+      "angio_fl3d_cor_p3_pre",
+      "angio_fl3d_cor_p3_post_arterial",
+      "angio_fl3d_cor_p3_post_venous"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "MR-Angiographie",
+    "examEngine": "KM-Angiographie",
+    "program": "Nieren",
+    "protocol": "Carebolus",
+    "sequenceArray": [
+      "angio_fl3d_cor_p3_pre",
+      "care_bolus_cor",
+      "angio_fl3d_cor_p3_post_arterial",
+      "angio_fl3d_cor_p3_post_venous"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "MR-Angiographie",
+    "examEngine": "KM-Angiographie",
+    "program": "1-Etage",
+    "protocol": "Carebolus",
+    "sequenceArray": [
+      "localizer",
+      "angio_fl3d_cor_p3_pre",
+      "care_bolus_cor",
+      "angio_fl3d_cor_p3_post"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "MR-Angiographie",
+    "examEngine": "KM-Angiographie",
+    "program": "1-Etage",
+    "protocol": "Test-Bolus",
+    "sequenceArray": [
+      "localizer",
+      "test_bolus_cor",
+      "angio_fl3d_cor_p3_pre",
+      "angio_fl3d_cor_p3_post_arterial",
+      "angio_fl3d_cor_p3_post_venous",
+      "angio_fl3d_cor_p3_post_equil."
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "MR-Angiographie",
+    "examEngine": "KM-Angiographie",
+    "program": "TWIST",
+    "protocol": "Test-Bolus",
+    "sequenceArray": ["test_bolus_sag_twist"]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "MR-Angiographie",
+    "examEngine": "KM-Angiographie",
+    "program": "TWIST",
+    "protocol": "Dynamisch",
+    "sequenceArray": ["angio_twist_cor_p3_carotids"]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "MR-Angiographie",
+    "examEngine": "KM-Angiographie",
+    "program": "TWIST",
+    "protocol": "Mehrere Phasen",
+    "sequenceArray": [
+      "angio_twist_sag_iso_head",
+      "angio_twist_cor_epat6_iso_carotids",
+      "angio_twist_cor_epat6_iso_thorax",
+      "angio_twist_cor_p4_iso_lower_leg"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "MR-Angiographie",
+    "examEngine": "KM-Angiographie",
+    "program": "Peripherie/ BBA",
+    "protocol": "Peripherie 3-Stationen",
+    "sequenceArray": [
+      "I_localizer_feet",
+      "II_localizer_legs",
+      "III_localizer_abdomen",
+      "vessel_scout über Bifu",
+      "angio_fl3d_cor_pre",
+      "care_bolus_cor",
+      "angio_fl3d_cor_post",
+      "angio_twist_cor_iso_feet_post"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "MR-Angiographie",
+    "examEngine": "KM-Angiographie",
+    "program": "Ganzkörper",
+    "protocol": "Testbolus",
+    "sequenceArray": [
+      "headneck_localizer",
+      "tho_localizer",
+      "abd_localizer",
+      "pelv_localizer",
+      "uppleg_localizer",
+      "lowleg_localizer",
+      "feet_localizer",
+      "vessel_scout",
+      "test_bolus_sag_Aorta asc.+desc.",
+      "IV_angio_fl3d_cor_tho_pre",
+      "III_angio_fl3d_cor_abd_pre",
+      "II_angio_fl3d_cor_legs_pre",
+      "I_angio_fl3d_cor_feet_pre",
+      "IV_angio_fl3d_cor_tho_post",
+      "III_angio_fl3d_cor_abd_post",
+      "II_angio_fl3d_cor_legs_post",
+      "I_angio_fl3d_cor_feet_post",
+      "vessel_scout_Hals",
+      "V_angio_fl3d_cor_neck_pre",
+      "V_angio_fl3d_cor_neck_post"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "MR-Angiographie",
+    "examEngine": "KM-Angiographie",
+    "program": "Kopf",
+    "protocol": "Testbolus",
+    "sequenceArray": [
+      "localizer_F120 *",
+      "vessel_scout_neck *",
+      "test_bolus_tra *",
+      "angio_fl3d_cor_p3_nativ *",
+      "angio_fl3d_cor_p3_post_arterial *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "MR-Angiographie",
+    "examEngine": "KM-Angiographie",
+    "program": "Kopf",
+    "protocol": "TWIST",
+    "sequenceArray": [
+      "localizer *", 
+      "vessel_scout_head *", 
+      "angio_twist_sag *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "MR-Angiographie",
+    "examEngine": "NATIV-Angiographie",
+    "program": "Kopf",
+    "protocol": "TOF - art + venös",
+    "sequenceArray": [
+      "tof_fl3d_tra",
+      "tof_fl3d_tra_large",
+      "tof_fl2d_sag_obl",
+      "tof_fl2d_paracor"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "MR-Angiographie",
+    "examEngine": "NATIV-Angiographie",
+    "program": "Kopf",
+    "protocol": "PC - arteriell",
+    "sequenceArray": [
+      "flow_pc3d_tra_venc40", 
+      "flow_pc3d_tra_venc75"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "MR-Angiographie",
+    "examEngine": "NATIV-Angiographie",
+    "program": "Kopf",
+    "protocol": "PC - venöse Sinus",
+    "sequenceArray": [
+      "flow_pc3d_sag",
+      "flow_pc3d_sag_fast",
+      "flow_pc3d_sag",
+      "flow_pc3d_sag_W"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "MR-Angiographie",
+    "examEngine": "NATIV-Angiographie",
+    "program": "Kopf",
+    "protocol": "Gefäßwand",
+    "sequenceArray": [
+      "t1_space_fs_sag_iso_0.6mm"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "MR-Angiographie",
+    "examEngine": "NATIV-Angiographie",
+    "program": "Hals",
+    "protocol": "Karotiden - ToF",
+    "sequenceArray": [
+      "localizer",
+      "vessel_scout_neck",
+      "tof_fl3d_tra_p2_multi-slab"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "MR-Angiographie",
+    "examEngine": "NATIV-Angiographie",
+    "program": "Hals",
+    "protocol": "Gefäßwand",
+    "sequenceArray": [
+      "localizer",
+      "vessel_scout_neck",
+      "tof_fl3d_tra_p2_multi-slab",
+      "t1_space_sag_p2_iso_0.9mm",
+      "t2_space_sag_p2_iso_0.9mm"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "MR-Angiographie",
+    "examEngine": "NATIV-Angiographie",
+    "program": "Abdomen",
+    "protocol": "NATIVE TrueFISP 3D Nieren",
+    "sequenceArray": [
+      "localizer_tra",
+      "localizer_cor",
+      "native_trufi3d_tra_p2_resp_trig",
+      "native_trufi3d_tra_p2_nav_ecg",
+      "native_trufi3d_tra_p2_nav"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "MR-Angiographie",
+    "examEngine": "NATIV-Angiographie",
+    "program": "Peripherie",
+    "protocol": "QISS",
+    "sequenceArray": [
+      "FastView *",
+      "qiss_trufi_tra_ecg *",
+      "qiss_trufi_tra_fast_hr_ecg *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "MR-Angiographie",
+    "examEngine": "NATIV-Angiographie",
+    "program": "Peripherie",
+    "protocol": "QISS_library",
+    "sequenceArray": [
+      "qiss_trufi_tra_ecg",
+      "qiss_flash_tra_ecg_bh",
+      "qiss_trufi_tra_highres_ecg",
+      "qiss_trufi_tra_fast_hr_ecg",
+      "qiss_flash_tra_fast_hr_ecg_bh",
+      "qiss_trufi_tra_fast_hr_highres_ecg"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Abdomen",
+    "examEngine": "gesamtes Abdomen",
+    "program": "Standard",
+    "protocol": "gesamtes Abdomen",
+    "sequenceArray": [
+      "localizer_haste_freie Atmung *",
+      "t2_haste_cor_p3_mbh/lks *",
+      "t2_haste_tra_p2_mbh/lks *",
+      "t1_fl2d_tra_p2_mbh_320 *",
+      "ep2d_diff_b50_400_800_tra_p2_trig *",
+      "t1_vibe_fs_tra_p4_bh_320 *",
+      "t1_vibe_dixon_cor_p6_bh_320_iso *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Abdomen",
+    "examEngine": "Divertikulitis",
+    "program": "Standard",
+    "protocol": "Divertikulitis",
+    "sequenceArray": [
+      "localizer_haste_freie Atmung *",
+      "t2_haste_cor_p3_mbh *",
+      "t2_haste_tra_p2_mbh *",
+      "t2_tse_fs_tra_p2_mbh_320 *",
+      "t1_vibe_fs_tra_p4_bh_dyn *",
+      "t1_vibe_dixon_cor_p6_bh_320_iso *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Abdomen",
+    "examEngine": "Hydro-Sellink",
+    "program": "Standard",
+    "protocol": "Hydro-Sellink",
+    "sequenceArray": [
+      "localizer_haste_freie Atmung *",
+      "t2_RARE_cor *",
+      "t2_haste_cor_p3_mbh/lks *",
+      "t2_haste_tra_p2_mbh/lks *",
+      "ep2d_diff_b50_400_800_tra_p2_trig *",
+      "t2_tse_fs_tra_p2_mbh/lks_320 *",
+      "t1_vibe_dixon_cor_nativ *",
+      "t1_vibe_dixon_cor_dyn_3Phasen *",
+      "t1_vibe_fs_tra_p4_bh_320 *",
+      "ep2d_diff_d_b50_400_800_tra *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Abdomen",
+    "examEngine": "Leber",
+    "program": "Standard",
+    "protocol": "Leber",
+    "sequenceArray": [
+      "localizer_haste_bh *",
+      "t2_haste_cor_p3_mbh/lks *",
+      "t2_haste_tra_p2_mbh/lks *",
+      "t1_fl2d_tra_p2_mbh_320 *",
+      "ep2d_diff_b50_400_800_tra_p2_trig *",
+      "t1_vibe_fs_tra_p4_bh_nativ *",
+      "test_bolus_tra *",
+      "t1_vibe_fs_tra_p4_bh_dyn *",
+      "t1_vibe_dixon_cor_p6_bh_320_iso *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Abdomen",
+    "examEngine": "Pankreas/Cholangiographie",
+    "program": "Standard",
+    "protocol": "Pancreas/Cholangiographie",
+    "sequenceArray": [
+      "localizer_haste_freie Atmung *",
+      "t2_haste_cor_p3_mbh_4mm *",
+      "t2_haste_tra_p2_mbh_3mm *",
+      "t1_fl2d_tra_p2_mbh_320 *",
+      "ep2d_diff_b50_400_800_tra_p2_trig *",
+      "t2_haste_fs_cor_MRCP_RARE *",
+      "t2_haste_cor_thin_sl_MRCP_bh *",
+      "t1_vibe_fs_tra_p4_bh_nativ *",
+      "test_bolus_tra *",
+      "t1_vibe_fs_tra_p4_bh_dyn *",
+      "t1_vibe_dixon_cor_p6_bh_320_iso *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Abdomen",
+    "examEngine": "Pancreas/Cholangiographie",
+    "program": "Alternativen",
+    "protocol": "Pancreas/Cholangiographie",
+    "sequenceArray": [
+      "t2_space_cor_c6_trig_384_iso",
+      "t2_space_fs_tra_p4_trig_512",
+      "t2_haste_fs_tra_p2_trig"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Abdomen",
+    "examEngine": "Nieren/Nebennieren",
+    "program": "Nieren",
+    "protocol": "Standard",
+    "sequenceArray": [
+      "localizer_haste_freie Atmung *",
+      "t2_RARE_cor *",
+      "t2_haste_cor_p3_lks/mbh *",
+      "t2_haste_tra_p2_lks/mbh *",
+      "t1_fl2d_tra_p2_mbh_320 *",
+      "ep2d_diff_b50_400_800_tra_p2_trig *",
+      "t1_vibe_fs_tra_p4_bh_nativ *",
+      "test_bolus_tra *",
+      "t1_vibe_fs_tra_p4_bh_dyn *",
+      "t1_vibe_dixon_cor_p6_bh_320_iso *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Abdomen",
+    "examEngine": "Nieren/Nebennieren",
+    "program": "Nieren",
+    "protocol": "Pyelonephritis Verlauf",
+    "sequenceArray": [
+      "localizer_haste_freie Atmung *",
+      "t2_RARE_cor *",
+      "t2_haste_cor_p3_lks/mbh *",
+      "t2_haste_tra_p2_lks/mbh *",
+      "ep2d_diff_b50_400_800_tra_p2_trig *",
+      "t1_vibe_fs_tra_p4_bh_nativ *",
+      "t1_vibe_fs_tra_p4_bh_pv *",
+      "t1_vibe_dixon_cor_p6_bh_320_iso *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Abdomen",
+    "examEngine": "Nieren/Nebennieren",
+    "program": "Nebennieren",
+    "protocol": "Standard",
+    "sequenceArray": [
+      "localizer_haste_freie Atmung *",
+      "t2_RARE_cor *",
+      "t2_haste_cor_p3_lks/mbh_4mm *",
+      "t2_haste_tra_p2_lks/mbh_3mm *",
+      "t1_fl2d_tra_p2_mbh_3mm *",
+      "t1_vibe_opp-in_tra_p4_bh_3mm *",
+      "ep2d_diff_b50_400_800_tra_p2_trig *",
+      "t1_vibe_fs_tra_p4_bh_nativ *",
+      "test_bolus_tra *",
+      "t1_vibe_fs_tra_p4_bh_dyn *",
+      "t1_vibe_dixon_cor_p6_bh_320_iso *",
+      "t1_vibe_fs_tra_p4_bh *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Abdomen",
+    "examEngine": "Nieren/Nebennieren",
+    "program": "Nierenarterienstenose",
+    "protocol": "Dixon 4-Phasen",
+    "sequenceArray": [
+      "localizer_haste_freie Atmung *",
+      "t2_haste_cor_p3_lks/mbh *",
+      "t2_haste_tra_p2_lks/mbh *",
+      "t1_vibe_opp-in_tra_p4_bh_320 *",
+      "t1_vibe_dixon_cor_nativ *",
+      "t1_vibe_dixon_cor_dyn_3Phasen *",
+      "t1_vibe_dixon_cor_p6_bh_320_iso *",
+      "t1_vibe_fs_tra_p4_bh_320 *",
+      "t1_vibe_fs_tra_p4_bh_KM spät *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Abdomen",
+    "examEngine": "Nieren/Nebennieren",
+    "program": "Nierenarterienstenose",
+    "protocol": "Testbolus 3-Phasen",
+    "sequenceArray": [
+      "localizer_haste_freie Atmung *",
+      "t2_haste_cor_p3_lks/mbh *",
+      "t2_haste_tra_p2_lks/mbh *",
+      "t1_vibe_opp-in_tra_p4_bh_320 *",
+      "test_bolus_tra *",
+      "angio_fl3d_cor_p3_pre *",
+      "angio_fl3d_cor_p3_post_arterial *",
+      "angio_fl3d_cor_p3_post_venous *",
+      "t1_vibe_dixon_cor_p6_bh_320_iso *",
+      "t1_vibe_fs_tra_p4_bh_320 *",
+      "t1_vibe_fs_tra_p4_bh_KM spät *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Abdomen",
+    "examEngine": "Urographie",
+    "program": "Urographie",
+    "protocol": "Standard",
+    "sequenceArray": [
+      "localizer_haste_freie Atmung *",
+      "t2_RARE_cor *",
+      "t2_RARE_sag *",
+      "t1_vibe_fs_cor_p2_bh_384_uro *",
+      "t1_vibe_fs_cor_p2_bh_384_uro *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Abdomen",
+    "examEngine": "Lymphom",
+    "program": "Standard",
+    "protocol": "Lymphom",
+    "sequenceArray": [
+      "localizer_haste_freie Atmung *",
+      "t2_haste_cor_p3_mbh/lks *",
+      "t2_haste_tra_p2_mbh/lks *",
+      "t1_fl2d_tra_p2_mbh_320 *",
+      "ep2d_diff_b50_400_800_tra_p2_trig *",
+      "t1_fl2d_tra_p2_mbh_320 *",
+      "t1_vibe_dixon_cor_p6_bh_320_iso *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Abdomen",
+    "examEngine": "Hernie",
+    "program": "Standard",
+    "protocol": "Statisch",
+    "sequenceArray": [
+      "localizer_haste_freie Atmung *",
+      "t2_haste_cor_p3_mbh *",
+      "t2_haste_sag_p3 *",
+      "t2_haste_tra_p2 *",
+      "t2_haste_tra_p2 pressen *",
+      "t2_haste_sag_p3_pressen *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Abdomen",
+    "examEngine": "Hernie",
+    "program": "Standard",
+    "protocol": "Dynamisch",
+    "sequenceArray": [
+      "localizer_haste_freie Atmung *",
+      "T2_TSE_COR_3mm *",
+      "t2_tirm_cor *",
+      "t1_tse_cor_p2_mbh_384 *",
+      "t2_trufi_sag_dynamisch *",
+      "t2_haste_tra_p2 *",
+      "t2_haste_tra_p2 pressen *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Abdomen",
+    "examEngine": "Staging Thorax/Abdomen",
+    "program": "Thorax/Abdomen",
+    "protocol": "Standard",
+    "sequenceArray": [
+      "localizer_haste_freie Atmung *",
+      "t2_haste_cor_p3_mbh_Th+ Abd *",
+      "t2_haste_tra_p2_mbh_320 *",
+      "t1_fl2d_tra_p2_mbh_320 *",
+      "ep2d_diff_b50_400_800_tra_p2_trig *",
+      "ep2d_diff_b50_400_800_tra_p3 *",
+      "t1_vibe_fs_tra_p4_bh_nativ *",
+      "test_bolus_tra *",
+      "t1_vibe_fs_tra_p4_bh_dyn *",
+      "t1_vibe_fs_tra_p4_bh_320 *",
+      "t1_vibe_dixon_cor_p6_bh_Tho+Abd *",
+      "t1_vibe_fs_tra_p4_bh_320 *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Becken",
+    "examEngine": "Standard",
+    "program": "Standard",
+    "protocol": "A",
+    "sequenceArray": [
+      "localizer *",
+      "t2_tse_sag_4mm *",
+      "t2_tse_tra_6mm *",
+      "t1_tse_tra_6mm *",
+      "ep2d_diff_b100_500_1000 *",
+      "t1_vibe_dixon_tra_1,5mm_HR *",
+      "t1_tse_tra_fs_6mm *",
+      "t1_tse_cor_fs_6mm *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Becken",
+    "examEngine": "Fistel",
+    "program": "Standard",
+    "protocol": "Fistel",
+    "sequenceArray": [
+      "localizer *",
+      "T2_TSE_SAG_3mm *",
+      "t2_tirm_cor_p2 *",
+      "ep2d_diff_b100_500_1000 *",
+      "T2_TSE_TRA_2mm *",
+      "t1_vibe_dixon_tra_1,5mm_HR *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Becken",
+    "examEngine": "Rektum",
+    "program": "Rektum",
+    "protocol": "Standard",
+    "sequenceArray": [
+      "localizer *",
+      "T2_TSE_SAG_3mm *",
+      "T2_TSE_TRA_2mm *",
+      "T2_TSE_COR_2mm *",
+      "ep2d_diff_b100_500_1000 *",
+      "t1_vibe_dixon_tra_1,5mm_HR_KM *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Becken",
+    "examEngine": "Rektum",
+    "program": "Rektum",
+    "protocol": "Alternativen",
+    "sequenceArray": [
+      "T2_3D_SPACE_pelvis_sag",
+      "T2_TSE_TRA_3mm",
+      "t2_space_ZOOMit_tra_320",
+      "t2_tse_tra_HR"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Becken",
+    "examEngine": "Krebshilfestudie",
+    "program": "Standard",
+    "protocol": "A",
+    "sequenceArray": [
+      "localizer *",
+      "T2_TSE_SAG_3mm *",
+      "T2_TSE_TRA_3mm *",
+      "T2_TSE_COR_3mm *",
+      "ep2d_diff_b100_500_1000_1400 *",
+      "t1_vibe_tra_pre_flip_2deg *",
+      "t1_vibe_tra_pre_flip_5deg *",
+      "t1_vibe_tra_pre_flip_8deg *",
+      "t1_vibe_tra_pre_flip_12deg *",
+      "t1_vibe_tra_dyn_15deg *",
+      "t2_space_tra_p2_320 *",
+      "t2_swi_tra_p2_1.5mm *",
+      "t1_vibe_dixon_tra_2mm *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Becken",
+    "examEngine": "Krebshilfestudie",
+    "program": "Standard",
+    "protocol": "B",
+    "sequenceArray": [
+      "localizer *",
+      "T2_TSE_SAG_3mm *",
+      "T2_TSE_TRA_3mm *",
+      "ep2d_diff_b100_500_1000_1400 *",
+      "t1_vibe_tra_pre_flip_2deg *",
+      "t1_vibe_tra_pre_flip_5deg *",
+      "t1_vibe_tra_pre_flip_8deg *",
+      "t1_vibe_tra_pre_flip_12deg *",
+      "t1_vibe_tra_dyn_15deg *",
+      "t2_space_tra_p2_320 *",
+      "t2_swi_tra_p2_1.5mm *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Becken",
+    "examEngine": "Hoden",
+    "program": "Hoden",
+    "protocol": "Standard",
+    "sequenceArray": [
+      "localizer *",
+      "localizer_Hoden *",
+      "t2_tirm_cor_p2 *",
+      "pd_tse_cor_3mm *",
+      "t2_tirm_tra_3mm *",
+      "t1_tse_cor_3mm *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Becken",
+    "examEngine": "Prostata",
+    "program": "Standard",
+    "protocol": "Fusionsbiopsie",
+    "sequenceArray": [
+      "localizer *",
+      "localizer_Prostata@center *",
+      "T2_TSE_SAG_3mm *",
+      "T2_TSE_TRA_2mm_streng_tra *",
+      "T2_TSE_COR_2mm *",
+      "ep2d_diff_zoomit *",
+      "t1_tse_cor_p2_mbh_384_knöch.Becken *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Becken",
+    "examEngine": "Prostata",
+    "program": "Standard",
+    "protocol": "Mit Dynamik",
+    "sequenceArray": [
+      "localizer *",
+      "localizer_Prostata@center *",
+      "T2_TSE_SAG_3mm *",
+      "T2_TSE_TRA_2mm_streng_tra *",
+      "T2_TSE_COR_2mm *",
+      "ep2d_diff_zoomit *",
+      "t1_tse_cor_p2_mbh_384_knöch.Becken *",
+      "t1_vibe_tra_dyn (Cave: nicht post OP, keine FS!) *",
+      "t1_vibe_dixon_tra_1,5mm_HR *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Becken",
+    "examEngine": "Prostata",
+    "program": "Standard",
+    "protocol": "post OP (Prostata entfernt)",
+    "sequenceArray": [
+      "localizer *",
+      "localizer_Prostata@center *",
+      "T2_TSE_SAG_3mm *",
+      "T2_TSE_TRA_2mm_streng_tra *",
+      "t1_tse_cor_p2_mbh_384_knöch.Becken *",
+      "ep2d_diff_zoomit *",
+      "t1_vibe_fs_tra_dyn  *",
+      "t1_vibe_dixon_tra_1,5mm_HR *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Becken",
+    "examEngine": "Prostata",
+    "program": "Prostatitis",
+    "protocol": "Standard",
+    "sequenceArray": [
+      "localizer *",
+      "localizer_Prostata@center *",
+      "T2_TSE_SAG_3mm *",
+      "T2_TSE_TRA_2mm_streng_tra *",
+      "ep2d_diff_zoomit *",
+      "t1_vibe_dixon_tra_1,5mm_HR *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Becken",
+    "examEngine": "Prostata",
+    "program": "Alternativsequenzen",
+    "protocol": "Sequenzauswahl",
+    "sequenceArray": [
+      "T2_TSE_TRA_2mm_anguliert *",
+      "T2_3D_SPACE_pelvis_sag",
+      "t2_tse_sag_3mm",
+      "test_t2_blade_tra",
+      "test_t2_blade_cor",
+      "t1_starvibe_fs_tra_iso_320",
+      "t2_tse_tra_3mm_0.8",
+      "ep2d_diff_zoomit_b50_100_400_800_1400_tra",
+      "ep2d_diff_zoomit_b50_100_400_800_tra",
+      "ep2d_diff_b50_400_1000",
+      "ep2d_diff_b100_500_1000_1400 *",
+      "t1_tse_cor_p2_mbh_384_knöch.Becken *",
+      "t2_tse_tra_p2_mbh_320_Lymphknoten *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Becken",
+    "examEngine": "Uterus",
+    "program": "nach Uterusembolisation",
+    "protocol": "Standard",
+    "sequenceArray": [
+      "localizer *",
+      "t2_RARE_cor *",
+      "t2_RARE_sag *",
+      "T2_TSE_SAG_3mm *",
+      "t2_tse_tra_6mm *",
+      "t1_tse_tra_6mm *",
+      "t1_vibe_dixon_tra_1,5mm *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Becken",
+    "examEngine": "weibl. Becken",
+    "program": "Gyntumore",
+    "protocol": "Standard",
+    "sequenceArray": [
+      "localizer *",
+      "T2_TSE_SAG_3mm *",
+      "T2_TSE_TRA_2mm *",
+      "T2_TSE_COR_2mm *",
+      "ep2d_diff_b100_500_1000 *",
+      "t1_vibe_dixon_tra_1,5mm_HR *",
+      "t1_vibe_dixon_tra_1,5mm_HR_KM *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Becken",
+    "examEngine": "weibl. Becken",
+    "program": "Alternativen",
+    "protocol": "Alternativsequenzen",
+    "sequenceArray": [
+      "t2_trufi_sag_dynamisch",
+      "ep2d_diff_d_b50_400_800_tra_6mm",
+      "ep2d_diff_d_b50_400_800_1000_3mm",
+      "pd tse fs tra HR",
+      "pd tse fs cor HR",
+      "t2 tse tra HR",
+      "T2_3D_SPACE_pelvis_tra *",
+      "T2_3D_SPACE_pelvis_sag *",
+      "ep2d_diff_zoomit_b50_100_400_800_1400_tra *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Becken",
+    "examEngine": "weibl. Becken",
+    "program": "Schwangerschaft",
+    "protocol": "Kinderkopf",
+    "sequenceArray": [
+      "localizer",
+      "localizer_Kind",
+      "t2_haste_tra",
+      "t2_haste_cor",
+      "t2_haste_sag"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Becken",
+    "examEngine": "Becken knöchern",
+    "program": "Standard",
+    "protocol": "Becken knöchern",
+    "sequenceArray": [
+      "localizer *",
+      "t2_tirm_cor_320 *",
+      "t1_tse_cor_p2_mbh_384_knöch.Becken *",
+      "t2_tse_tra *",
+      "t1_tse_tra_gesamtes Becken_mbh *",
+      "t1_vibe_dixon_tra_1,5mm_HR *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Becken",
+    "examEngine": "Becken knöchern",
+    "program": "Standard",
+    "protocol": "Metall",
+    "sequenceArray": [
+      "localizer *",
+      "t2_tse_stir_cor_WARP *",
+      "t1_tse_cor_warp_320 *",
+      "t2_tse_tra_WARP *",
+      "t1_tse_tra_warp_ges.Becken *",
+      "t1_vibe_dixon_tra_1,5mm_HR *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Becken",
+    "examEngine": "Defäkographie",
+    "program": "Defäkographie",
+    "protocol": "Dynamisch",
+    "sequenceArray": [
+      "localizer *",
+      "t2_trufi_tra_6mm *",
+      "t2_trufi_sag 6mm *",
+      "t2_trufi_cor_6mm *",
+      "t2_trufi_sag_anspannen *",
+      "t2_trufi_sag_pressen *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "Knie",
+    "program": "Trauma",
+    "protocol": "Trauma",
+    "sequenceArray": [
+      "localizer *",
+      "localizer_sag+cor+tra *",
+      "pd_tse_fs_sag_512_2.5mm *",
+      "t2_tse_tra_fs_2mm *",
+      "pd_tse_fs_cor_512 *",
+      "t1_tse_cor *",
+      "t2_tse_cor_Vorderes Kreuzband *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "Knie",
+    "program": "Entzündung",
+    "protocol": "Entzündung",
+    "sequenceArray": [
+      "localizer *",
+      "localizer_sag+cor+tra *",
+      "pd_tse_fs_sag_512_2.5mm *",
+      "t2_tse_tra_fs_2mm *",
+      "pd_tse_fs_cor_512 *",
+      "t1_tse_cor *",
+      "t1_tse_cor_fs_KM *",
+      "t1_tse_tra_fs_KM *",
+      "t1_tse_sag_fs_KM *",
+      "t1_vibe_fs_cor_p3_512_iso *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "Knie",
+    "program": "Metall",
+    "protocol": "Metall",
+    "sequenceArray": [
+      "localizer *",
+      "localizer_sag+cor+tra *",
+      "t2_tirm_sag_WARP *",
+      "t2_tirm_tra_WARP *",
+      "t2_tirm_cor_WARP *",
+      "t1_tse_cor_WARP *",
+      "t2_tse_cor_VKB_WARP *",
+      "pd_tse_sag_high-bw *",
+      "t1_tse_cor_WARP_KM *",
+      "t1_tse_sag_WARP_KM *",
+      "t1_tse_tra_WARP_KM *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "Knie",
+    "program": "Alternativen",
+    "protocol": "Alternativsequenzen",
+    "sequenceArray": [
+      "localizer *",
+      "localizer_sag+cor+tra *",
+      "t2_tse_tra_fs_2mm *",
+      "pd_tse_fs_tra_448_p2_s2_2mm *",
+      "pd_tse_fs_tra_448_p2_s2_1,5mm *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "OSG",
+    "program": "Trauma",
+    "protocol": "Trauma",
+    "sequenceArray": [
+      "localizer_tra *",
+      "localizer_sag+cor+tra *",
+      "t2_tse_stir_cor_320 *",
+      "t1_tse_cor *",
+      "pd_tse_fs_tra *",
+      "pd_tse_fs_sag_448_2mm *",
+      "t2_tse_tra_p2_Syndesmose *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "OSG",
+    "program": "Entzündung",
+    "protocol": "Entzündung",
+    "sequenceArray": [
+      "localizer_tra *",
+      "localizer_sag+cor+tra *",
+      "t2_tse_stir_cor_320 *",
+      "t1_tse_cor *",
+      "pd_tse_fs_tra *",
+      "pd_tse_fs_sag_448_2mm *",
+      "t2_tse_tra_p2_Syndesmose *",
+      "t1_tse_fs_cor_p2_448_KM *",
+      "t1_tse_fs_tra_p2_384_KM *",
+      "t1_tse_fs_sag_p2_448_KM *",
+      "t1_vibe_fs_sag_p3_512_iso *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "OSG",
+    "program": "Knorpel",
+    "protocol": "Degenerativ",
+    "sequenceArray": [
+      "localizer_tra *",
+      "localizer_sag+cor+tra *",
+      "t2_tse_stir_cor_320 *",
+      "t1_tse_cor *",
+      "pd_tse_fs_tra *",
+      "pd_tse_fs_sag_448_2mm *",
+      "t2_de3d_we_sag_iso_320 *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "OSG",
+    "program": "Metall",
+    "protocol": "Metall",
+    "sequenceArray": [
+      "localizer_tra *",
+      "localizer_sag+cor+tra *",
+      "pd_tse_tra_WARP *",
+      "pd_tse_cor_WARP *",
+      "t1_tse_cor_WARP *",
+      "pd_tse_sag_WARP *",
+      "t2_tse_tra_p2_WARP *",
+      "t1_tse_cor_WARP_KM *",
+      "t1_tse_tra_p2_WARP_KM *",
+      "t1_tse_sag_p2_WARP_KM *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "OSG",
+    "program": "Achillessehne",
+    "protocol": "Standard",
+    "sequenceArray": [
+      "localizer_tra *",
+      "localizer_sag+cor+tra *",
+      "t2_tirm_sag *",
+      "t1_tse_sag *",
+      "pd_tse_tra_480_p2_s2 *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "Fuss",
+    "program": "Standard",
+    "protocol": "Standard",
+    "sequenceArray": [
+      "localizer_tra *",
+      "localizer_Fuß_sag+cor+tra *",
+      "pd_tse_fs_cor *",
+      "t1_tse_cor_p2_s2 *",
+      "pd_tse_fs_sag *",
+      "t2_tse_tra_p2_s2_512 *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "Fuss",
+    "program": "Entzündung",
+    "protocol": "Entzündung",
+    "sequenceArray": [
+      "localizer_tra *",
+      "localizer_Fuß_sag+cor+tra *",
+      "pd_tse_fs_cor *",
+      "t1_tse_cor_p2_s2 *",
+      "pd_tse_fs_sag *",
+      "t2_tse_tra_p2_s2_512 *",
+      "t1_tse_fs_cor_p2_s2_448 *",
+      "t1_tse_fs_tra_p2_s2_384 *",
+      "t1_tse_fs_sag_p2_s2_448 *",
+      "t1_vibe_fs_cor_iso *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "Fuss",
+    "program": "Osteitis/Osteomyelitis",
+    "protocol": "Osteitis/Osteomyelitis",
+    "sequenceArray": [
+      "localizer_tra *",
+      "localizer_Fuß_sag+cor+tra *",
+      "t2_tirm_cor *",
+      "t1_tse_cor_p2_s2 *",
+      "t1_tse_fs_cor_p2_s2_448 *",
+      "t1_tse_fs_tra_p2_s2_384 *",
+      "t1_tse_fs_sag_p2_s2_448 *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "Fuss",
+    "program": "Morton Neurom",
+    "protocol": "Morton Neurom",
+    "sequenceArray": [
+      "localizer_tra *",
+      "localizer_Fuß_sag+cor+tra *",
+      "t2_tirm_cor *",
+      "t1_tse_cor_p2_s2 *",
+      "pd_tse_fs_sag *",
+      "t2_tse_tra_p2_s2_512 *",
+      "t1_tse_fs_tra_p2_s2_384 *",
+      "t1_tse_fs_cor_p2_s2_448 *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "Fuss",
+    "program": "Zehen",
+    "protocol": "Zehen",
+    "sequenceArray": [
+      "localizer_tra *",
+      "localizer_sag+cor+tra *",
+      "t1_tse_tra *",
+      "t2_tse_tra_fs *",
+      "t1_tse_cor *",
+      "pd_tse_sag fs *",
+      "t1_tse_cor_fs_KM *",
+      "t1_tse_tra_fs *",
+      "t1_vibe_fs_tra_iso *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "Zehen",
+    "program": "Zehen",
+    "protocol": "B",
+    "sequenceArray": [
+      "localizer_tra *",
+      "localizer_sag+cor+tra *",
+      "t1_tse_cor_512 *",
+      "t2_tse_stir_cor_448 *",
+      "t2_tse_tra_fs *",
+      "pd_tse_fs_sag_320_2.5mm *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "Schulter",
+    "program": "Rotatorenmanschette",
+    "protocol": "Rotatorenmanschette",
+    "sequenceArray": [
+      "localizer *",
+      "localizer_tra_cor *",
+      "localizer_sag *",
+      "t1_tse_cor *",
+      "t2_tse_tra_fs *",
+      "t2_tirm_cor *",
+      "t2_tse_sag *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "Schulter",
+    "program": "Trauma/Luxation",
+    "protocol": "Labrum",
+    "sequenceArray": [
+      "localizer *",
+      "localizer_tra_cor *",
+      "localizer_sag *",
+      "t1_tse_cor *",
+      "t2_tirm_cor *",
+      "t1_tse_fs_cor *",
+      "t1_tse_fs_tra *",
+      "t1_vibe_fs_cor_iso *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "Schulter",
+    "program": "Entzündung",
+    "protocol": "Entzündung",
+    "sequenceArray": [
+      "localizer *",
+      "localizer_tra_cor *",
+      "localizer_sag *",
+      "t1_tse_cor *",
+      "t2_tirm_cor *",
+      "pd_tse_fs_sag_384 *",
+      "pd_tse_fs_parasag *",
+      "pd_tse_fs_parasag *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "Schulter",
+    "program": "Metall",
+    "protocol": "Metall",
+    "sequenceArray": [
+      "localizer *",
+      "localizer_tra_cor *",
+      "localizer_sag *",
+      "t1_tse_cor_WARP *",
+      "t2_tse_tra_WARP *",
+      "t2_tirm_cor_WARP *",
+      "t2_tse_sag_WARP *",
+      "t1_tse_tra_WARP *",
+      "t1_tse_cor_WARP *",
+      "t1_tse_sag_WARP *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "Schulter",
+    "program": "MR Arthroskopie",
+    "protocol": "Indirekte MR-Arthroskopie",
+    "sequenceArray": [
+      "localizer *",
+      "localizer_tra_cor *",
+      "localizer_sag *",
+      "t2_tse_tra_fs *",
+      "t2_tirm_cor *",
+      "t2_tse_sag *",
+      "t1_vibe_dixon_cor_iso"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "Schulter",
+    "program": "Clavicula",
+    "protocol": "Clavicula",
+    "sequenceArray": [
+      "localizer *",
+      "localizer_tra_cor *",
+      "localizer_sag *",
+      "t2_tse_stir_cor_trig",
+      "t2_blade_tra",
+      "t1_blade_cor",
+      "t1_vibe_dixon_cor_iso",
+      "t1_blade_cor_fs",
+      "pd_tse_fs_tra_320_3mm",
+      "t2_de3d_we_cor_p2_iso"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "Ellenbogen",
+    "program": "Standard",
+    "protocol": "Standard",
+    "sequenceArray": [
+      "localizer *",
+      "localizer_sag+cor+tra *",
+      "t1_tse_cor_SMS2 *",
+      "t2_tse_stir_cor_256_SMS2 *",
+      "pd_tse_fs_sag_320_SMS2 *",
+      "t2_tse_tra_fs_SMS2 *",
+      "t2_tse_tra_SMS2 *",
+      "t1_tse_fs_cor *",
+      "t1_tse_fs_tra *",
+      "t1_vibe_fs_cor_iso *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "Ellenbogen",
+    "program": "Standard + KM",
+    "protocol": "Standard + KM",
+    "sequenceArray": [
+      "localizer *",
+      "localizer_sag+cor+tra *",
+      "t1_tse_cor_SMS2 *",
+      "t2_tse_stir_cor_256_SMS2 *",
+      "pd_tse_fs_sag_320_SMS2 *",
+      "t2_tse_tra_fs_SMS2 *",
+      "t2_tse_tra_SMS2 *",
+      "t1_tse_fs_cor *",
+      "t1_tse_fs_tra *",
+      "t1_vibe_fs_cor_iso *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "Ellenbogen",
+    "program": "Standard",
+    "protocol": "A",
+    "sequenceArray": [
+      "localizer *",
+      "localizer_sag+cor+tra *",
+      "pd_tse_fs_sag *",
+      "t1_tse_cor *",
+      "t2_tirm_cor *",
+      "t2_tse_tra *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "Ellenbogen",
+    "program": "Bizepssehne",
+    "protocol": "Distal",
+    "sequenceArray": [
+      "localizer *",
+      "localizer_sag+cor+tra *",
+      "t2_tse_sag *",
+      "t2_tirm_cor *",
+      "t2_tse_tra *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "Handgelenk",
+    "program": "Standard",
+    "protocol": "A",
+    "sequenceArray": [
+      "localizer_tra *",
+      "localizer_sag+cor+tra *",
+      "t1_tse_cor_2mm *",
+      "t2_tirm_cor *",
+      "pd_tse_fs_tra_336 *",
+      "t2_tse_sag_320 *",
+      "t2_me2d_cor *",
+      "t1_tse_tra_fs *",
+      "t1_tse_cor_fs *",
+      "t1_vibe_we_cor_p3_640_1mm *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "Handgelenk",
+    "program": "Standard",
+    "protocol": "B",
+    "sequenceArray": [
+      "localizer_tra *",
+      "localizer_sag+cor+tra *",
+      "t1_tse_cor_2mm *",
+      "pd_tse_fs_cor_384_2mm *",
+      "pd_tse_fs_cor_320 *",
+      "t2_tirm_cor *",
+      "t2_me3d_cor_iso *",
+      "t2_me2d_cor *",
+      "t1_tse_tra_fs *",
+      "t1_tse_cor_fs *",
+      "t1_vibe_we_cor_p3_640_1mm *",
+      "pd_tse_fs_tra_336 *",
+      "t2_tse_sag_320 *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "Handgelenk",
+    "program": "Standard",
+    "protocol": "C",
+    "sequenceArray": [
+      "localizer_tra *",
+      "localizer_sag+cor+tra *",
+      "t1_tse_cor_2mm *",
+      "pd_tse_fs_cor_384_2mm *",
+      "pd_tse_fs_cor_320 *",
+      "t2_tirm_cor *",
+      "t2_me3d_cor_iso *",
+      "t2_me2d_cor *",
+      "t1_tse_tra_fs *",
+      "t1_tse_cor_fs *",
+      "t1_vibe_we_cor_p3_640_1mm *",
+      "pd_tse_fs_tra_336 *",
+      "t2_tse_sag_320 *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "Handgelenk",
+    "program": "Metall",
+    "protocol": "Metall",
+    "sequenceArray": [
+      "localizer_sag+cor+tra *",
+      "t2_tirm_cor_WARP *",
+      "pd_tse_cor_WARP *",
+      "t2_me2d_cor *",
+      "t1_tse_cor_fs_WARP *",
+      "t1_tse_tra_fs_WARP *",
+      "t2_tse_tra_WARP *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "Handgelenk",
+    "program": "Alternativen",
+    "protocol": "Alternativsequenzen",
+    "sequenceArray": [
+      "t2_me2d_cor",
+      "t2_me3d_cor_iso",
+      "t2_me2d_tra",
+      "t1_tse_tra_384",
+      "t2_de3d_we_cor_iso",
+      "t2_tse_fs_tra",
+      "pd_blade_tra_320",
+      "pd_blade_fs_tra_320",
+      "t2_blade_cor_384",
+      "pd_blade_fs_cor_320",
+      "t1_vibe_dixon_cor_iso"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "Hand",
+    "program": "Standard",
+    "protocol": "A",
+    "sequenceArray": [
+      "localizer_tra *",
+      "localizer_sag+cor+tra *",
+      "t1_tse_cor_p3_640_2mm *",
+      "t2_tirm_cor_p3_640_2mm *",
+      "t1_tse_tra_fs_3mm *",
+      "t1_tse_cor_640_fs_2mm *",
+      "t1_vibe_we_cor_p3_640_iso *",
+      "t2_tse_tra_p2_512_ganze Hand_4mm *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "Hand",
+    "program": "Alternativen",
+    "protocol": "A",
+    "sequenceArray": [
+      "t2_me2d_cor",
+      "t1_space_cor",
+      "pd_space_fs_cor",
+      "t1_se_tra",
+      "pd_tse_cor",
+      "pd_tse_fs_cor",
+      "t1_vibe_we_cor_p3_640_iso"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "Hand",
+    "program": "Hände bds. in BL",
+    "protocol": "A",
+    "sequenceArray": [
+      "localizer_sag+cor+tra *",
+      "t1_tse_cor_p3_640_2mm *",
+      "t2_tirm_cor_p3_640_2mm *",
+      "t2_tse_tra_p2_512_ganze Hand_li_4mm *",
+      "t2_tse_tra_p2_512_ganze Hand_re_4mm *",
+      "t1_tse_cor_fs_p3_640_2mm *",
+      "t1_tse_tra_fs_3mm_rechts *",
+      "t1_tse_tra_fs_3mm_links *",
+      "t1_vibe_we_cor_iso_512_bilat *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "Finger",
+    "program": "Standard Handspule",
+    "protocol": "A",
+    "sequenceArray": [
+      "localizer_tra *",
+      "localizer_sag+cor+tra *",
+      "t1_tse_cor 2mm *",
+      "pd_tse_fs_cor_2mm *",
+      "t2_tse_sag *",
+      "t2_tse_dixon_tra_352_p2_s2 *",
+      "t2_tse_tra_448 *",
+      "pd_tse_tra_fs_512_2mm *",
+      "t2_tse_tra_fs *",
+      "t1_tse_fs_tra *",
+      "t1_tse_cor_fs *",
+      "t1_vibe_fs_cor_p3_640_iso *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "Finger",
+    "program": "Standard Handspule",
+    "protocol": "B",
+    "sequenceArray": [
+      "localizer_tra *",
+      "localizer_sag+cor+tra *",
+      "t1_tse_cor_512 *",
+      "t2_tse_stir_cor_448 *",
+      "t2_tse_tra_fs *",
+      "pd_tse_fs_sag_320_2.5mm *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "Daumen",
+    "program": "Standard",
+    "protocol": "A",
+    "sequenceArray": [
+      "localizer_tra *",
+      "localizer_sag+cor+tra *",
+      "localizer_Daumen *",
+      "t1_tse_cor 2mm *",
+      "pd_tse_fs_cor_2mm *",
+      "t2_tse_sag *",
+      "t2_tse_dixon_tra_352_p2_s2 *",
+      "t2_tse_tra_448 *",
+      "t2_tse_tra_fs *",
+      "t1_tse_cor_fs *",
+      "t1_tse_fs_tra *",
+      "t1_vibe_fs_cor_p3_640_iso *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "Hüfte",
+    "program": "Standard",
+    "protocol": "A",
+    "sequenceArray": [
+      "localizer *",
+      "t2_tirm_cor bilateral *",
+      "t1_tse_cor bilateral *",
+      "pd_tse_fs_parasag_Schenkelhals_unilat *",
+      "pd_tse_fs_paratra_Schenkelhals_unilat *",
+      "t1_vibe_dixon_tra_1,5mm *",
+      "t2_tse_tra_4mm *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "Hüfte",
+    "program": "Standard",
+    "protocol": "B",
+    "sequenceArray": [
+      "localizer *",
+      "t2_tirm_cor bilateral *",
+      "pd_tse_fs_parasag_Schenkelhals_unilat *",
+      "pd_tse_fs_paratra_Schenkelhals_unilat *",
+      "t2_me2d_tra_unilat *",
+      "t2_de3d_we_cor unilat *",
+      "t1_tse_fs_tra bilateral *",
+      "t1_tse_fs_cor bilateral *",
+      "t1_tse_fs_tra_unilateral *",
+      "t1_tse_fs_cor unilateral *",
+      "t1_vibe_tra_fs_192_iso_unilat *",
+      "t1_vibe_fs_cor_iso_512_bilat *",
+      "t1_tse_fs_sag *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "Hüfte",
+    "program": "Standard",
+    "protocol": "C",
+    "sequenceArray": [
+      "localizer *",
+      "t2_tirm_cor_high-bw *",
+      "t1_cor_high-bw *",
+      "pd_tse_tra_high-bw *",
+      "t2_tse_tra_320_unilat h-bw *",
+      "t2_tse_cor_high-bw *",
+      "t1_cor_high-bw *",
+      "t1_tra_high-bw *",
+      "t1_sag_high-bw *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "Hüfte",
+    "program": "Alternativen",
+    "protocol": "A",
+    "sequenceArray": [
+      "t2_tse_fs_tra",
+      "t1_tse_fs_cor",
+      "t1_tse_fs_tra",
+      "pd_tse_fs_paracor_1 Seite",
+      "t1_tse_fs_paracor_1 Seite",
+      "t2_me2d_tra_1 Seite",
+      "t2_me2d_paracor_1 Seite"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "ISG",
+    "program": "Standard",
+    "protocol": "A",
+    "sequenceArray": [
+      "localizer *",
+      "t2_tirm_cor_p2 *",
+      "t1_tse_cor *",
+      "t1_vibe_dixon_tra_iso *",
+      "t1_tse_cor_fs *",
+      "t1_tse_tra_fs *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Gelenke",
+    "examEngine": "ISG",
+    "program": "alte Sequenzen",
+    "protocol": "A",
+    "sequenceArray": ["ep2d_diff_b50_400_800_tra", "pd_tse_fs_sag"]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Extremitäten",
+    "examEngine": "Ober-/Unterschenkel",
+    "program": "1 Etage",
+    "protocol": "A",
+    "sequenceArray": [
+      "localizer *",
+      "localizer_sag *",
+      "t2_tse_stir_cor *",
+      "t2_tse_stir_tra *",
+      "t1_tse_cor *",
+      "t2_tse_tra_8mm_40Schichten *",
+      "t1_vibe_dixon_cor_iso *",
+      "t1_vibe_dixon_tra_AP *",
+      "t1_vibe_dixon_cor_AP *",
+      "t1_tse_cor_fs *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Extremitäten",
+    "examEngine": "Ober-/Unterschenkel",
+    "program": "1 Etage",
+    "protocol": "B",
+    "sequenceArray": [
+      "localizer *",
+      "localizer_sag *",
+      "t2_tirm_cor *",
+      "t2_tse_stir_tra *",
+      "t1_tse_cor *",
+      "t2_tse_tra *",
+      "t1_vibe_dixon_cor_iso *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Extremitäten",
+    "examEngine": "Ober-/Unterschenkel",
+    "program": "Ganzbein",
+    "protocol": "A",
+    "sequenceArray": [
+      "I_localizer_feet *",
+      "II_localizer_legs *",
+      "III_localizer_abdomen *",
+      "t2 stir cor  *",
+      "t1_tse_cor *",
+      "t2_tse_tra_8mm_40Schichten *",
+      "t1_vibe_dixon_cor *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Extremitäten",
+    "examEngine": "Ober-/Unterschenkel",
+    "program": "Ganzbein",
+    "protocol": "B",
+    "sequenceArray": [
+      "I_localizer_feet *",
+      "II_localizer_legs *",
+      "III_localizer_abdomen *",
+      "t2_tirm_cor *",
+      "t1_tse_cor *",
+      "t2_tse_tra_8mm_40 Schichten *",
+      "t1_vibe_dixon_cor_iso *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Extremitäten",
+    "examEngine": "Ober-/Unterschenkel",
+    "program": "Myopathie (gesamte Beine bds)",
+    "protocol": "A",
+    "sequenceArray": [
+      "I_localizer_feet",
+      "II_localizer_legs",
+      "III_localizer_abdomen",
+      "t2 stir cor",
+      "t2_tse_fs_tra_bilat_",
+      "t1_tse_tra_6mm",
+      "t1_vibe_dixon_cor"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Extremitäten",
+    "examEngine": "Oberarm + Schulter",
+    "program": "Standard",
+    "protocol": "A",
+    "sequenceArray": [
+      "localizer *",
+      "localizer_tra_cor *",
+      "localizer_sag *",
+      "t2_tirm_cor *",
+      "t1_tse_cor *",
+      "t2_tse_tra_320 *",
+      "resolve_diff_b50_800_tra_p2 *",
+      "t1_tse_fs_tra *",
+      "t1_tse_fs cor *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Extremitäten",
+    "examEngine": "Ober-/Unterschenkel",
+    "program": "Rotationsprogramm bd. Beine",
+    "protocol": "A",
+    "sequenceArray": [
+      "I_localizer_feet *",
+      "II_localizer_legs *",
+      "III_localizer_abdomen *",
+      "t2 stir cor  *",
+      "t2_tse_tra_Hüfte_bds. *",
+      "t2_tse_tra_Knie_bds. *",
+      "t2_tse_tra_OSG_bds. *",
+      "t1_tse_cor *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Extremitäten",
+    "examEngine": "Ober-/Unterschenkel",
+    "program": "Muskelstruktur - 1 Etage",
+    "protocol": "A",
+    "sequenceArray": [
+      "localizer *",
+      "localizer_sag *",
+      "t2_tse_stir_cor_p4_s2 *",
+      "pd_tse_fs_tra_480_p2_s2 *",
+      "pd_tse_fs_cor_352 *",
+      "t2_tse_tra_512_4mm *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Ganzkörper",
+    "examEngine": "Porsche-Ganzkörper",
+    "program": "Porsche-GK",
+    "protocol": "A",
+    "sequenceArray": [
+      "headneck_localizer *",
+      "tho_localizer *",
+      "abd_localizer *",
+      "pelv_localizer *",
+      "t2_tse_stir_cor_Kopf_Hals *",
+      "t2_tse_dark-fluid_tra_4mm_Kopf *",
+      "ep2d_diff_4scan_trace_p2_s2_2mm_Kopf *",
+      "t2_haste_cor_p3_mbh_Tho/Abd *",
+      "t2_haste_tra_p2_mbh *",
+      "ep2d_diff_b50_400_800_tra_p2_Oberbauch *",
+      "T2_TSE_TRA_2mm_Prostata *",
+      "ep2d_diff_zoomit *",
+      "T2_TSE_SAG_3mm *",
+      "T2_TSE_TRA_2mm *",
+      "ep2d_diff_b100_500_1000 *",
+      "t2_tirm_sag_BLWS *",
+      "t1_vibe_fs_tra_p4_bh_Leber *",
+      "t1_vibe_fs_tra_p4_bh_320 *",
+      "t1_vibe_dixon_cor_p6_bh_Tho+Abd *",
+      "t1_mprage_sag_we *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Ganzkörper",
+    "examEngine": "Lymphom (Hals/Tho/Abd)",
+    "program": "Lymphom",
+    "protocol": "A",
+    "sequenceArray": [
+      "headneck_localizer",
+      "tho_localizer",
+      "abd_localizer",
+      "pelv_localizer",
+      "headneck_t2_tse_stir_cor",
+      "t2_haste_cor_p3_mbh_Th+ Abd",
+      "pelv_t2_tse_stir_cor",
+      "t1_tse_cor_p2_mbh",
+      "t2_haste_tra_p2_mbh_320",
+      "ep2d_diff_b50_400_800_tra_p3",
+      "t1_vibe_fs_tra_p4_bh_320",
+      "t1_vibe_dixon_cor_p6_bh_320_iso"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Ganzkörper",
+    "examEngine": "Lymphom (Hals/Tho/Abd)",
+    "program": "Alternativen",
+    "protocol": "A",
+    "sequenceArray": [
+      "headneck_t2_space_stir_cor",
+      "tho_t2_space_stir_trig_cor",
+      "abd_t2_space_stir_trig_cor",
+      "pelv_t2_space_stir_cor",
+      "uppleg_t2_space_stir_cor",
+      "lowleg_t2_space_stir_cor",
+      "feet_t2_space_stir_cor"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Ganzkörper",
+    "examEngine": "Lymphom (Hals/Tho/Abd)",
+    "program": "2D",
+    "protocol": "A",
+    "sequenceArray": [
+      "t1_starvibe_fs_tra_320",
+      "t1_vibe_dixon_cor_p6_bh_320_iso",
+      "t2_haste_tra_p2_mbh_320",
+      "t2_haste_cor_p3_mbh"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kinder",
+    "examEngine": "Kopf",
+    "program": "Standard",
+    "protocol": "A",
+    "sequenceArray": [
+      "AAHead_Scout *",
+      "t2_tse_tra_3mm *",
+      "t2_tse_dark-fluid_cor *",
+      "ep2d_diff_4scan_trace_p2_s2_2mm *",
+      "t1_mprage_sag_we *",
+      "t2_tse_sag_3mm *",
+      "t2_fl2d_tra_hemo *",
+      "t1_mprage_sag_we *",
+      "t1_se_17rb130_tra *",
+      "t1_fl3d_sag_p2_iso_BlackBone *",
+      "t1_tir_cor_3mm *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kinder",
+    "examEngine": "Kopf",
+    "program": "Hydrocephalus",
+    "protocol": "A",
+    "sequenceArray": [
+      "AAHead_Scout *",
+      "t2_space_sag_p2_iso *",
+      "t1_se_17rb130_tra *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kinder",
+    "examEngine": "Abdomen",
+    "program": "Standard",
+    "protocol": "A",
+    "sequenceArray": [
+      "localizer_haste_bh *",
+      "t2_haste_cor_p3_trig *",
+      "t2_haste_tra_p2_trig *",
+      "test_t1_starvibe_tra_320 *",
+      "t1_vibe_dixon_cor_dyn_5Phasen *",
+      "test_t1_starvibe_fs_tra_320 *",
+      "t1_vibe_dixon_cor_p6_bh_320_iso *",
+      "t2_space_cor_p3_trig_384_iso *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kinder",
+    "examEngine": "Abdomen",
+    "program": "Standard",
+    "protocol": "B",
+    "sequenceArray": [
+      "localizer_haste_bh *",
+      "t2_haste_cor_p3_ptr *",
+      "t2_haste_tra_p2_ptr *",
+      "t1_fl2d_tra_p2_mbh_320 *",
+      "ep2d_diff_b50_400_800_tra_p2_trig *",
+      "t1_vibe_fs_tra_p4_bh_nativ *",
+      "test_bolus_tra *",
+      "t1_vibe_fs_tra_p4_bh_dyn *",
+      "t1_vibe_dixon_cor_p6_bh_320_iso *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kinder",
+    "examEngine": "Abdomen",
+    "program": "Standard",
+    "protocol": "C",
+    "sequenceArray": [
+      "localizer_haste_bh *",
+      "t2_haste_cor_p3_mbh *",
+      "t2_haste_tra_p2_mbh *",
+      "t1_fl2d_tra_p2_mbh_320 *",
+      "ep2d_diff_b50_400_800_tra_p2_trig *",
+      "t1_vibe_fs_tra_p4_bh_nativ *",
+      "care_bolus_sag *",
+      "t1_vibe_fs_tra_p4_bh_dyn *",
+      "t1_vibe_dixon_cor_p6_bh_320_iso *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kinder",
+    "examEngine": "Abdomen",
+    "program": "Nieren Uro-Programm",
+    "protocol": "A",
+    "sequenceArray": [
+      "localizer_haste_bh *",
+      "t2_haste_cor_p3_trig *",
+      "t2_haste_tra_p2_trig *",
+      "t1_fl2d_tra_p2_320 *",
+      "t2_space_cor_p3_trig_384 *",
+      "t2_space_tra_über_Pathologie *",
+      "angio_twist_cor_epat6_iso *",
+      "t1_vibe_dixon_tra *",
+      "t1_vibe_fs_cor_p2_bh_384_uro_spät *",
+      "t2_haste_cor_thin_sl_bh *",
+      "t2_haste_sag_thin_sl_bh_rechts *",
+      "t2_haste_sag_thin_sl_bh_links *",
+      "t2_haste_tra_thin_sl_bh *",
+      "test_t1_starvibe_fs_tra_320 *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kinder",
+    "examEngine": "Abdomen",
+    "program": "Angio",
+    "protocol": "A",
+    "sequenceArray": ["angio_twist_cor_epat6_iso"]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kinder",
+    "examEngine": "Becken (Weichteil, Knöchern)",
+    "program": "Standard",
+    "protocol": "A",
+    "sequenceArray": [
+      "localizer *",
+      "t2_tirm_cor *",
+      "t1_tse_cor *",
+      "t2_tse_tra_2mm *",
+      "t1_vibe_dixon_cor_iso *",
+      "t2_space_sag_iso *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kinder",
+    "examEngine": "Becken (Weichteil, Knöchern)",
+    "program": "Standard",
+    "protocol": "B",
+    "sequenceArray": [
+      "localizer *",
+      "t2_tse_sag_2mm *",
+      "t2_tse_cor_2mm *",
+      "t1_tse_tra_2mm *",
+      "t1_vibe_dixon_cor_iso *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kinder",
+    "examEngine": "Thorax",
+    "program": "Thorax+Angio",
+    "protocol": "A",
+    "sequenceArray": [
+      "localizer *",
+      "t2_haste_cor_p3_trigger *",
+      "t2_haste_tra_p2_trigger *",
+      "t2_haste_sag_p3_trigger *",
+      "test_t1_starvibe_tra_320 *",
+      "angio_twist_cor_epat6_iso_thorax *",
+      "test_t1_starvibe_tra_320 *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kinder",
+    "examEngine": "Thorax",
+    "program": "TEST",
+    "protocol": "A",
+    "sequenceArray": [
+      "localizer",
+      "t2_tse_cor_Phasenscout",
+      "t2_tse_tra_Phasenscout",
+      "t2_tse_tra_fs_Phasenscout",
+      "angio_twist_cor_epat4_iso",
+      "angio_twist_cor_epat4_iso",
+      "t1_starvibe_fs_tra_freie Atmung",
+      "PREFUL_Hannover_300"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kinder",
+    "examEngine": "Wirbelsäule (FOV 160mm)",
+    "program": "Standard",
+    "protocol": "A",
+    "sequenceArray": [
+      "AASpine_Scout *",
+      "t2_tse_sag_2mm *",
+      "t1_tse_sag_2mm *",
+      "t2_tse_stir_sag *",
+      "t2_tse_tra_2mm *",
+      "t1_tse_tra_2mm *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kinder",
+    "examEngine": "Wirbelsäule (FOV 160mm)",
+    "program": "Standard",
+    "protocol": "B",
+    "sequenceArray": [
+      "I_AASpine_Scout *",
+      "II_AASpine_Scout *",
+      "III_AASpine_Scout *",
+      "t2_tse_sag_2mm *",
+      "t1_tse_sag_2mm *",
+      "t2_tse_stir_sag *",
+      "t2_tse_tra_2mm *",
+      "t1_tse_tra_2mm *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Kinder",
+    "examEngine": "Hand (+Angio)",
+    "program": "Standard",
+    "protocol": "A",
+    "sequenceArray": [
+      "localizer_tra *",
+      "localizer_sag+cor+tra *",
+      "t2_tirm_cor *",
+      "t1_tse_cor 3mm *",
+      "t2_de3d_we_cor *",
+      "t2_tse_tra *",
+      "t1_tse_tra_384 *",
+      "angio_fl3d_cor_nativ *",
+      "angio_fl3d_cor_KM *",
+      "ep2d_diff_b50_400_800_tra_p3",
+      "t1_vibe_fs_tra_p4_bh_320",
+      "t1_vibe_dixon_cor_p6_bh_320_iso"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Studienprotokolle",
+    "examEngine": "Kopf",
+    "program": "Fiber-Tracking",
+    "protocol": "DKI",
+    "sequenceArray": [
+      "AAHead_Scout *",
+      "T2_space_sag_DK_c4 *",
+      "DKI_BIPOLAR_2.5mm_64dir *",
+      "DKI_BIPOLAR_2.5mm_64dir_topup_PA *",
+      "DKI_BIPOLAR_2.5mm_4b_30dir *",
+      "DKI_BIPOLAR_2.5mm_4b_30dir_topup_PA *"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Studienprotokolle",
+    "examEngine": "Kopf",
+    "program": "Standard Studienprotololl",
+    "protocol": "FDA Oncology Brain",
+    "sequenceArray": [
+      "localizer",
+      "t1_fl2d_sag",
+      "t2_tirm_tra_dark-fluid",
+      "ep2d_diff_3scan_trace_p2",
+      "t1_mprage_tra_pre",
+      "pd+t2_tse_tra_3mm",
+      "ep2d_perf_p2",
+      "t1_mprage_tra_post"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Studienprotokolle",
+    "examEngine": "Kopf",
+    "program": "fMRT",
+    "protocol": "BOLD visuell",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "t1_mprage_sag",
+      "T2_space_tra",
+      "DKI_BIPOLAR_2.5mm_64dir",
+      "DKI_BIPOLAR_2.5mm_64dir_topup_PA",
+      "3D_space_darkfluid_tra",
+      "gre_field_mapping",
+      "ep2d_pace_moco_p2_Augen offen-geschlossen",
+      "csi_slaser_135",
+      "t2_swi_tra_p2",
+      "ep2d_diff_4scan_trace_p2_s2_2mm",
+      "ep2d_perf_p2",
+      "t1_mprage_sag_KM",
+      "T1_space_sag_fs_black-blood_KM"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Studienprotokolle",
+    "examEngine": "Kopf",
+    "program": "fMRT",
+    "protocol": "BOLD motorisch",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "t1_mprage_sag",
+      "T2_space_tra",
+      "DKI_BIPOLAR_2.5mm_64dir",
+      "DKI_BIPOLAR_2.5mm_64dir_topup_PA",
+      "3D_space_darkfluid_tra",
+      "gre_field_mapping",
+      "ep2d_pace_moco_p2_re_Hand",
+      "ep2d_pace_moco_p2_li_hand",
+      "t2_swi_tra_p2",
+      "ep2d_diff_4scan_trace_p2_s2_2mm",
+      "ep2d_perf_p2",
+      "t1_mprage_sag_KM",
+      "T1_space_sag_fs_black-blood_KM"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Studienprotokolle",
+    "examEngine": "Kopf",
+    "program": "Spezielle Erkrankungen",
+    "protocol": "Visual Snow Syndrom",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "MPRAGE GRAPPA2",
+      "T2_space_tra",
+      "DKI_BIPOLAR_2.5mm_64dir",
+      "DKI_BIPOLAR_2.5mm_64dir_topup_PA",
+      "3D_space_darkfluid_tra",
+      "csi_se_30",
+      "tse_MDME_p3",
+      "ep2d_diff_4scan_trace_p2_s2_2mm",
+      "ep2d_perf_p2",
+      "MPRAGE GRAPPA2 KM",
+      "T1_space_sag_fs_black-blood_KM"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Studienprotokolle",
+    "examEngine": "Kopf",
+    "program": "INTRAGO",
+    "protocol": "INTRAGO",
+    "sequenceArray": [
+      "AAHead_Scout",
+      "t2_tse_dark-fluid_tra_3mm",
+      "ep2d_diff_4scan_trace_p2_s2_2mm",
+      "t1_mprage_tra_p2_iso",
+      "ep2d_diff_mddw_20_p2_s2_ap",
+      "ep2d_diff_mddw_20_p2_s2_pa",
+      "T2_space_sag_opt_c4",
+      "ep2d_perf_p2",
+      "t2_tse_tra_512_3mm",
+      "t1_mprage_tra_p2_iso_KM"
+    ]
+  },
+  {
+    "tree": "PRISMA FLEET",
+    "region": "Studienprotokolle",
+    "examEngine": "Abdomen",
+    "program": "Divertikulitis",
+    "protocol": "Divertikulitis",
+    "sequenceArray": [
+      "localizer_haste_freie Atmung *",
+      "t2_haste_cor_p3_mbh *",
+      "t2_haste_tra_p2_mbh *",
+      "t2_tse_fs_tra_p2_mbh_320 *",
+      "ep2d_diff_d_b50_400_800_tra *",
+      "t1_vibe_fs_tra_p4_bh_dyn *",
+      "t1_vibe_dixon_cor_p6_bh_320_iso *"
+    ]
+  }
+]

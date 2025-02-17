@@ -1,0 +1,20 @@
+MRT_Untersuchungskatalog/
+├── backend/
+│ ├── app.py # Flask-API Endpunkte
+│ ├── db.py # Datenbankinitialisierung & JSON-Import
+│ ├── protocols.json # Ausgangsdatei
+│ └── protocols.db # SQLite-Datenbank (wird bei erstem Start erzeugt)
+├── frontend/
+│ ├── public/
+│ │ └── index.html # Basis-HTML inkl. Roboto
+│ ├── src/
+│ │ ├── index.js # Einstiegspunkt der React-App
+│ │ ├── App.js # Hauptkomponente
+│ │ ├── components/
+│ │ │ ├── Navigation.js # Navigationsbereich
+│ │ │ ├── ProtocolTable.js # Anzeige der Protokolltabellen
+│ │ │ └── EditOverlay.js # Bearbeitungsoverlay
+│ │ └── styles/
+│ │ └── style.css # Basis Styles, dunkles Farbschema
+│ └── package.json # Frontend-Konfiguration
+└── README.md # Projektbeschreibung und Setup-Anleitung

@@ -1,0 +1,171 @@
+#################################################
+#       DETAILLIERTE ANWENDUNGSBESCHREIBUNG       #
+#################################################
+
+1. Gesamtkonzept der Anwendung
+--------------------------------
+Die Webanwendung dient der DYNAMISCHEN ANZEIGE, NAVIGATION und VERWALTUNG eines hierarchisch strukturierten MRT-Untersuchungskatalogs. Alle Untersuchungseinträge samt zugehöriger Sequenzprotokolle liegen ursprünglich in der Datei "protocols.json" vor. Beim ersten Start der Anwendung wird diese JSON automatisch in eine relationale SQLite-Datenbank namens "protocols.db" überführt. Ab diesem Zeitpunkt erfolgen alle Lese-, Schreib- und Änderungsoperationen ausschließlich über diese Datenbank, was für hohe Transaktionssicherheit, effiziente Abfragen und einfache Erweiterbarkeit sorgt.
+
+Ziele der Anwendung:
+- Import & Migration: Einmaliger Import der "protocols.json" in eine robuste SQLite-Datenbank.
+- Dynamische Navigation: Darstellung und Durchsuchbarkeit des Katalogs über mehrere hierarchische Ebenen.
+- Editierbarkeit: Über ein Bearbeitungsoverlay können Protokolltabellen (Sequenzlisten) vollständig editiert werden – Zeilen können neu angeordnet, hinzugefügt oder gelöscht werden.
+- Persistente Speicherung: Nach der Migration erfolgt das gesamte Laden/Speichern/Ändern über "protocols.db". Die ursprüngliche JSON dient lediglich als Ausgangsbasis.
+
+-------------------------------------------------
+2. Datenhaltung: protocols.json vs. protocols.db
+-------------------------------------------------
+
+2.1. Die Ausgangsdatei (protocols.json)
+------------------------------------------
+Die "protocols.json" enthält alle Untersuchungseinträge in einem JSON-Array. Jeder Eintrag ist ein Objekt mit folgenden Schlüsseln:
+
+• tree:  
+  – System-/Plattformname (z. B. "PRISMA FLEET")
+
+• region:  
+  – Anatomische Region (z. B. "Kopf", "Wirbelsäule", etc.)
+
+• examEngine:  
+  – Klinisches Untersuchungsziel (z. B. "Standard", "Stroke", "Dissektion")
+
+• program:  
+  – Protokollvariante oder Kontrastmitteloption (z. B. "Standard", "Gefäße", "TGA")
+
+• protocol:  
+  – Spezifisches Sequenzprotokoll (z. B. "nativ", "KM", "Unkooperativ")
+
+• sequenceArray:  
+  – Array mit technischen Sequenznamen in festgelegter Reihenfolge. Beispielsweise:  
+    ["AAHead_Scout", "t2_tse_sag_3mm", "ep2d_diff_4scan_trace_p2_s2_2mm", …]
+
+Beispielhafter JSON-Eintrag:
+{
+  "tree": "PRISMA FLEET",
+  "region": "Kopf",
+  "examEngine": "Standard",
+  "program": "Standard",
+  "protocol": "nativ",
+  "sequenceArray": [
+    "AAHead_Scout",
+    "t2_tse_sag_3mm",
+    "ep2d_diff_4scan_trace_p2_s2_2mm",
+    "t2_tse_dark-fluid_tra_4mm",
+    "t1_mprage_sag_we",
+    "t2_swi_tra_p2"
+  ]
+}
+
+-------------------------------------------------
+2.2. Die SQLite-Datenbank (protocols.db)
+------------------------------------------
+Beim ersten Start wird "protocols.json" in die SQLite-Datenbank "protocols.db" überführt, die zwei Haupttabellen enthält:
+
+Tabelle: protocols
+-------------------------------------------------
+| Spalte      | Typ       | Beschreibung                                       |
+|-------------|-----------|----------------------------------------------------|
+| id          | INTEGER   | Primärschlüssel, automatisch inkrementiert         |
+| tree        | TEXT      | System-/Plattformbezeichnung, z. B. "PRISMA FLEET" |
+| region      | TEXT      | Anatomische Region, z. B. "Kopf", "Wirbelsäule"     |
+| examEngine  | TEXT      | Klinisches Untersuchungsziel, z. B. "Standard"       |
+| program     | TEXT      | Protokollvariante/Option, z. B. "Standard", "Gefäße" |
+| protocol    | TEXT      | Spezifisches Sequenzprotokoll ("nativ", "KM", …)     |
+-------------------------------------------------
+
+Tabelle: sequences
+----------------------------------------------------------
+| Spalte          | Typ     | Beschreibung                                               |
+|-----------------|---------|------------------------------------------------------------|
+| id              | INTEGER | Primärschlüssel, automatisch inkrementiert                 |
+| protocol_id     | INTEGER | Fremdschlüssel, verweist auf protocols.id                  |
+| sequence_order  | INTEGER | Nummerische Reihenfolge der Sequenz (beginnend bei 1)       |
+| sequence        | TEXT    | Technischer Sequenzname (z. B. "AAHead_Scout", "t2_tse_dark-fluid_tra_4mm") |
+----------------------------------------------------------
+
+Ablauf des Importprozesses:
+1. Beim ersten Start: Prüft die Anwendung, ob "protocols.db" vorhanden ist.
+2. Ist keine Datenbank vorhanden:  
+   – Liest ein Import-Skript die "protocols.json" ein.
+   – Legt die Tabellen "protocols" und "sequences" an.
+   – Überträgt jeden JSON-Eintrag in einen Datensatz der Tabelle "protocols" und speichert anschließend jeden Eintrag aus dem "sequenceArray" (mit Reihenfolge) in der Tabelle "sequences".
+3. Ab dem nächsten Start: Wird ausschließlich die "protocols.db" genutzt, um den Untersuchungskatalog aufzubauen,
+   Änderungen zu speichern und das UI zu generieren.
+4. Die ursprüngliche "protocols.json" dient nur als Ausgangsbasis für den initialen Import.
+
+-------------------------------------------------
+3. Ablauf und Funktionsweise der Webanwendung
+-------------------------------------------------
+
+3.1. Initialisierung
+-----------------------
+• Beim Start der Anwendung wird geprüft, ob "protocols.db" existiert.
+  - Falls nicht: Automatischer Import aus "protocols.json" erfolgt und die Datenbank wird erstellt.
+  - Falls vorhanden: Die bestehende Datenbank wird verwendet; die JSON wird nicht mehr eingelesen.
+
+3.2. Navigation & Anzeige (UI)
+-------------------------------
+• Navigationsmenü (linker Container):
+  - Zeigt dauerhaft die Elemente der Ebenen tree, region und examEngine an.
+  - Beim Klick auf einen "region"-Eintrag werden die zugehörigen "examEngine"-Einträge mittels Animation ein- oder ausgeklappt.
+  - Ein Suchfeld filtert dynamisch Einträge (alle Ebenen werden durchsucht).
+  - Pfeilschaltflächen (oder Tastatursteuerung) ermöglichen das Durchblättern der Hierarchie.
+  - Bei schmaler Bildschirmbreite wird das Menü als Hamburger-Menü angezeigt.
+
+• Hauptcontainer (rechter Bereich):
+  - Oben wird der aktuelle Navigationspfad angezeigt (z. B. "PRISMA FLEET > Abdomen > Leber").
+  - Protokolltabellen erscheinen, die jeweils ein spezifisches Sequenzprotokoll (protocol) mit der zugehörigen Sequenzliste darstellen.
+  - Neben jeder Tabelle und neben dem aktuellen Navigationspfad ist ein Bearbeiten-Icon eingebettet.
+
+3.3. Bearbeitungsoverlay
+-------------------------
+• Beim Klick auf das Bearbeiten-Icon neben einer protocol Tabelle öffnet sich ein Overlay:
+  - Die Sequenzliste wird in einer editierbaren Tabelle dargestellt.
+  - Einzelne Sequenzzeilen können verändert und per Drag-and-Drop neu sortiert werden.
+  - Es bestehen Möglichkeiten, neue Zeilen hinzuzufügen oder bestehende zu entfernen.
+• Kontrollbuttons im Overlay:
+  - "Speichern": Validiert die Eingaben und schreibt die Änderungen dauerhaft in "protocols.db".
+  - "Abbrechen": Schließt das Overlay, ohne Änderungen zu übernehmen.
+• Feedbackmechanismen:
+  - Unmittelbare visuelle Rückmeldungen (z. B. Fehlermeldungen) bei ungültigen Eingaben.
+
+• Beim Klick auf das Bearbeiten-Icon neben dem Navigationspfad öffnet sich ein Overlay:
+  - Die Protokolltabellen lassen sich im ganzen löschen.
+  - Schaltfläche zum Hinzufügen eines neuen protocol. Anschließend Bearbeitung der einzelnen Sequenzzeilen wie im Tabellen-Overlay.
+
+-------------------------------------------------
+4. Design
+-------------------------------------------------
+• Modernes User Interface
+  - Das UI ist modern und auf höchsten Bedienkomfort und Übersichtlichkeit ausgelegt.
+  - Dunkles Farbschema in Schwarz und Grautönen. Viele semitransparente Milchglaßelemente. Darstellung von Räumlichkeit.
+  - Schriftart Roboto (per Link in den Code eingebunden).
+  - Flüssige Übergangseffekte und Animationen (zur flüssigen Darstellung mit GPU Unterstützung). Dezente Hover-Effekte und Symbolanimationen.
+  - Buttons mit typischen SVG-Icons entsprechend des Zweck.
+
+-------------------------------------------------
+5. Betrieb und Datenverwaltung
+-------------------------------------------------
+• Nach dem initialen Import wird "protocols.db" als zentraler persistenter Speicher genutzt.
+  - Das Laden des Katalogs, das Anlegen neuer Einträge und das Ändern bestehender Datensätze erfolgen ausschließlich über diese Datenbank.
+  - Die ursprüngliche "protocols.json" wird nicht mehr zur Laufzeit verwendet.
+
+-------------------------------------------------
+6. Wichtige Hinweise und Erweiterungsmöglichkeiten
+-------------------------------------------------
+• Erweiterbarkeit:  
+  – Falls weitere Metadaten zu Untersuchungen oder Sequenzen benötigt werden, kann die Relationstabelle problemlos erweitert werden.
+
+#################################################
+#                 FAZIT                         #
+#################################################
+• Die Anwendung ermöglicht eine dynamische und responsive Navigation durch einen umfangreichen MRT-Untersuchungskatalog.
+• Die Ausgangsdatei "protocols.json" wird einmalig in die SQLite-Datenbank "protocols.db" überführt, die dann als persistenter Datenspeicher dient.
+• Über die Benutzeroberfläche werden alle Protokolltabellen angezeigt; ein spezielles Bearbeitungsoverlay erlaubt umfassende Editierfunktionen (Protokolle hinzufügen/löschen, Reihenfolge ändern, Zeilen hinzufügen/löschen, Einträge bearbeiten).
+• Sämtliche Änderungen werden unmittelbar in der Datenbank gespeichert, was eine hohe Datenintegrität und effiziente Abfragen garantiert.
+
+*************************************************
+Hinweis:
+Sollten im weiteren Entwicklungsverlauf logische Fehler oder Anforderungen auffallen, werden diese Aspekte ergänzt. 
+
+Diese Anwendungsbeschreibung umfasst damit alle wesentlichen Aspekte und bietet anhand der genauen Struktur von "protocols.json" und "protocols.db" eine optimale Grundlage für einen reibungslosen Betrieb der Anwendung.

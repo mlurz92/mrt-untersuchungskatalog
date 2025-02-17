@@ -1,0 +1,217 @@
+= Dynamische MRT-Untersuchungskatalog-Anwendung – Spezifikation
+:doctype: book
+:icons: font
+:source-highlighter: highlight.js
+:sectnums:
+:experimental:
+:toc: left
+:toclevels: 3
+
+Dieses Dokument beschreibt in höchstmöglicher Detailtiefe die Spezifikation einer Webanwendung, die den dynamischen Import, die Anzeige, Navigation und Verwaltung eines hierarchisch strukturierten MRT-Untersuchungskatalogs ermöglicht. Es dient als exakte Bauanleitung für einen KI-basierten Codegenerator. Neben den grundlegenden Vorgaben werden dabei auch die komplexen Aspekte der hierarchischen Codierung aus der Datei `protocols.json` abgebildet und in eine relationale SQLite-Datenbank überführt.
+
+== 1. Gesamtkonzept und Anwendungsziele
+
+Die Anwendung hat folgende Hauptaufgaben:
+* Einmaliger Import der Ausgangsdaten (aus `protocols.json`) in eine robuste SQLite-Datenbank (`protocols.db`).
+* Dynamische, hierarchische Navigation durch den Untersuchungskatalog basierend auf den Feldern:
+  - **tree** (z. B. "PRISMA FLEET")
+  - **region** (z. B. "Kopf", "Wirbelsäule", etc.)
+  - **examEngine** (z. B. "Standard", "Stroke", "Dissektion" etc.)
+  - **program** (z. B. "Standard", "Gefäße" etc.)
+  - **protocol** (z. B. "nativ", "KM", etc.)
+* Darstellung der Protokolltabellen inklusive der zugehörigen Sequenzliste (welche in der JSON als Array unter dem Schlüssel `sequenceArray` hinterlegt ist) mitsamt ihrer numerisch festgelegten Reihenfolge.
+* Vollständige Editierbarkeit der Sequenzlisten über ein Bearbeitungsoverlay (mit Funktionen zum Drag-and-Drop, Zeile hinzufügen oder löschen).
+* Persistente Speicherung sämtlicher Änderungen ausschließlich über die SQLite-Datenbank – die ursprüngliche `protocols.json` dient dabei nur als Ausgangsbasis.
+* Bereitstellung eines modernen, responsiven und animierten User Interfaces (UI) mit dunklem Farbschema, Roboto-Schrift, flüssigen Übergängen und GPU-Unterstützung.
+
+== 2. Architektur, Ablauf und Datenmodell
+
+=== 2.1. Initialisierung und Datenimport
+
+Beim Start der Anwendung werden folgende Schritte durchgeführt:
+
+. **Prüfung**: Es wird überprüft, ob die Datenbank `protocols.db` existiert.
+  - Falls nicht:
+    - Lese und parsen der Datei `protocols.json`.
+    - Erzeugung der SQLite-Datenbank `protocols.db`.
+    - Anlage der Tabellen `protocols` und `sequences`.
+    - Übertragung jedes JSON-Eintrags in einen Datensatz der Tabelle `protocols` und Speicherung der zugehörigen Sequenzeinträge (aus dem Array `sequenceArray`) in der Tabelle `sequences` unter Beachtung der richtigen Reihenfolge (mittels eines numerischen Feldes `sequence_order`).
+  - Falls ja:
+    - Verwendung der bestehenden Datenbank (die JSON-Datei wird nicht erneut eingelesen).
+
+==== 2.1.1. Pseudocode – Importprozess
+
+[listing, pseudocode]
+----
+if not exists("protocols.db"):
+    json_data = readJSON("protocols.json")
+    createDatabase("protocols.db")
+    executeSQL("CREATE TABLE protocols (id INTEGER PRIMARY KEY AUTOINCREMENT, tree TEXT, region TEXT, examEngine TEXT, program TEXT, protocol TEXT)")
+    executeSQL("CREATE TABLE sequences (id INTEGER PRIMARY KEY AUTOINCREMENT, protocol_id INTEGER, sequence_order INTEGER, sequence TEXT, FOREIGN KEY(protocol_id) REFERENCES protocols(id))")
+    for entry in json_data:
+        protocol_id = insert("protocols", {
+            tree: entry.tree,
+            region: entry.region,
+            examEngine: entry.examEngine,
+            program: entry.program,
+            protocol: entry.protocol
+        })
+        order = 1
+        for sequence in entry.sequenceArray:
+            insert("sequences", {
+                protocol_id: protocol_id,
+                sequence_order: order,
+                sequence: sequence
+            })
+            order += 1
+else:
+    useDatabase("protocols.db")
+----
+
+=== 2.2. Datenmodellierung
+
+Die persistente Speicherung erfolgt über zwei zentrale Tabellen:
+
+==== 2.2.1. Tabelle: protocols
+
+[cols="1,1,3",options="header"]
+|===
+| Spalte     | Datentyp | Beschreibung
+
+| id         | INTEGER  | Primärschlüssel, automatisch inkrementiert
+| tree       | TEXT     | System-/Plattformbezeichnung (z. B. "PRISMA FLEET"). Dient als oberste Hierarchieebene.
+| region     | TEXT     | Anatomische Region (z. B. "Kopf", "Wirbelsäule", "Hals", "Abdomen", etc.)
+| examEngine | TEXT     | Klinisches Untersuchungsziel (z. B. "Standard", "Stroke", "Dissektion" etc.)
+| program    | TEXT     | Protokollvariante oder Zusatzinformation (z. B. "Standard", "Gefäße", etc.)
+| protocol   | TEXT     | Spezifisches Sequenzprotokoll (z. B. "nativ", "KM", "Unkooperativ", etc.)
+|===
+
+==== 2.2.2. Tabelle: sequences
+
+[cols="1,1,3",options="header"]
+|===
+| Spalte         | Datentyp | Beschreibung
+
+| id             | INTEGER  | Primärschlüssel, automatisch inkrementiert
+| protocol_id    | INTEGER  | Fremdschlüssel, verweist auf protocols.id
+| sequence_order | INTEGER  | Numerische Reihenfolge der Sequenz (beginnend bei 1)
+| sequence       | TEXT     | Technischer Sequenzname (z. B. "AAHead_Scout", "t2_tse_dark-fluid_tra_4mm", etc.)
+|===
+
+==== 2.2.3. Hierarchische Codierung
+
+Die hierarchische Struktur des Untersuchungskataloges wird abgebildet durch:
+  
+  - Nutzung der JSON-Schlüssel **tree**, **region**, **examEngine**, **program** und **protocol**.
+  - Diese Felder definieren gleichzeitig die Navigation im UI und bilden die logischen Filterkriterien.
+  - Jeder Eintrag wird somit in der Datenbank eindeutig über seine Position in dieser Hierarchie erfasst.
+  - Die zugehörigen Sequenznamen aus `sequenceArray` werden in der Tabelle `sequences` mit zugehörigem `protocol_id` verknüpft und in der richtigen Reihenfolge (mittels `sequence_order`) gespeichert.
+
+=== 2.3. Ablauf der Benutzerinteraktion
+
+Folgende Bereiche sind im UI vorgesehen:
+
+* **Initialisierung:**
+  - Prüfung der Existenz von `protocols.db` und – falls erforderlich – Import der JSON-Daten.
+* **Navigation & Anzeige:**
+  - *Linker Navigationsbereich:*
+    - Darstellung der hierarchischen Ebenen (tree, region, examEngine).
+    - Dynamisches Ein- und Ausklappen der Unterebenen (z. B. region → examEngine) mittels Animation.
+    - Suchfeld zur dynamischen Filterung über alle Ebenen.
+    - Pfeil-/Tastatursteuerung sowie Hamburger-Menü bei schmalem Bildschirm.
+  - *Rechter Hauptbereich:*
+    - Anzeige des aktuellen Navigationspfads (z. B. "PRISMA FLEET > Kopf > Standard").
+    - Darstellung der Protokolltabellen mit zugehöriger Sequenzliste.
+    - Einbettung eines Bearbeiten-Icons sowohl nahe der Tabellen als auch im Navigationspfad.
+* **Bearbeitungsoverlay:**
+  - Aktivierung des Overlays durch Klick auf das Bearbeiten-Icon.
+  - Editierbare Darstellung der Sequenzliste mit Drag-and-Drop, Zeilenlösch- und Hinzufügefunktion.
+  - Steuerungselemente „Speichern“ (mit Validierung und permanenter Speicherung in `protocols.db`) und „Abbrechen“ (ohne Übernahme der Änderungen).
+  - Visuelles Feedback bei Eingabefehlern (z. B. durch Fehlermeldungen).
+
+== 3. Benutzeroberfläche und Design
+
+=== 3.1. Layout und Komponenten
+
+* *Navigationsmenü (linker Container):*
+  - Darstellung der Hierarchie basierend auf den Feldern **tree**, **region** und **examEngine**.
+  - Dynamische Filterung, ein-/ausklappende Animationen und responsive Darstellung (Hamburger-Menü bei kleinen Bildschirmbreiten).
+* *Hauptanzeigebereich (rechter Container):*
+  - Anzeige des aktuellen Pfads (z. B. "PRISMA FLEET > Kopf > Standard").
+  - Protokolltabellen, in denen jeweils das spezifische Sequenzprotokoll und die nummerierte Sequenzliste abgebildet sind.
+  - Bearbeitungsoptionen (Icons) direkt neben dem Navigationspfad und den Tabellen.
+* *Editierungsoverlays:*
+  - Separate Overlays für die Bearbeitung kompletter Protokolltabellen oder einzelner Sequenzlisten.
+  - Unterstützung von Drag-and-Drop, Zeilenaustausch, Hinzufügen und Löschen von Einträgen.
+
+=== 3.2. Gestaltungsprinzipien
+
+* Modernes und responsives UI:
+  - Dunkles Farbschema in Schwarz/Grautönen mit semitransparenter Milchglaß-Optik.
+  - Verwendung der Schriftart Roboto (über einen externen Google Fonts-Link eingebunden).
+  - Flüssige Übergangseffekte mit GPU-Unterstützung, dezente Hover-Effekte und SVG-basierte Icons.
+* Zusätzliche Designaspekte:
+  - Klare Trennung von Navigation und Anzeigebereich.
+  - Animationen und Übergänge zur Verbesserung der Bedienbarkeit.
+  - Konsistente Icon-Sets und Farbhervorhebungen zur intuitiven Interaktion.
+
+== 4. Schnittstellen und API-Spezifikation
+
+Die Webanwendung bietet interne API-Endpunkte, um den Austausch mit der SQLite-Datenbank zu steuern:
+
+[cols="1,1,1,1",options="header"]
+|===
+| Endpunkt                 | HTTP-Methode | Parameter (Datentypen)                                     | Rückgabewerte (Datentypen)
+
+| /api/protocols           | GET          | –                                                          | JSON-Array mit allen Protokolleinträgen (inkl. Hierarchie)
+| /api/protocols/{id}      | GET          | id: INTEGER                                                | JSON-Objekt eines Protokolleintrags inkl. Sequenzen
+| /api/protocols           | POST         | body: JSON (tree, region, examEngine, program, protocol, sequenceArray) | Erfolgsstatus, neu erzeugte id
+| /api/protocols/{id}      | PUT          | body: JSON (Felder, die aktualisiert werden sollen)        | Erfolgsstatus
+| /api/protocols/{id}      | DELETE       | id: INTEGER                                                | Erfolgsstatus
+|===
+
+* Alle Schnittstellen implementieren Validierungsmechanismen zum Schutz vor fehlerhaften Eingaben.
+* Die hierarchische Codierung (über tree/region/examEngine/program/protocol) wird auch bei der API-Nutzung beachtet.
+
+== 5. Technische Spezifikationen und Abhängigkeiten
+
+=== 5.1. Programmiersprachen und Frameworks
+
+* Backend:
+  - Implementierung in einer Sprache mit effizienter SQLite-Anbindung (z. B. Python, Node.js oder Java).
+* Frontend:
+  - Moderne Webtechnologien (HTML5, CSS3, JavaScript).
+  - Frameworks/Bibliotheken wie React, Vue.js oder Angular für reaktive UI-Komponenten.
+* UI-Design:
+  - Einsatz von CSS-Frameworks, Animationstechniken (z. B. GSAP oder nativen CSS3-Transitions) und SVG-Icons.
+
+=== 5.2. Infrastruktur und Abhängigkeiten
+
+* Datenbank: SQLite (z. B. SQLite 3.x)
+* Externe Bibliotheken:
+  - JSON-Parser (je nach Programmiersprache)
+  - UI-Frameworks (React, Vue, Angular etc.)
+  - CSS-Bibliotheken und Icon-Sets (z. B. Material Icons, Google Fonts für Roboto)
+* Plattform:
+  - Plattformunabhängige Ausführung als Webanwendung (moderne Browser)
+
+== 6. Erweiterungsmöglichkeiten und Hinweise
+
+* Die modulare Architektur erlaubt eine einfache Erweiterung:
+  - Zusätzliche Metadaten in `protocols.json` können problemlos in die Datenbankstruktur integriert werden.
+  - Neue API-Endpunkte und UI-Komponenten lassen sich per Erweiterung der Schnittstellen implementieren.
+* Logische Änderungen oder Erweiterungsanforderungen (z. B. alternative Filtermethoden oder weitere Ebenen in der Hierarchie) werden in zukünftigen Releases ergänzt.
+* Besonderer Fokus liegt auf der korrekten Einhaltung der hierarchischen Codierung, sodass der Untersuchungskatalog immer eindeutig nach den Feldern **tree**, **region**, **examEngine**, **program** und **protocol** strukturiert ist.
+
+== 7. Zusammenfassung
+
+Dieses Dokument fasst alle wesentlichen Aspekte der dynamischen MRT-Untersuchungskatalog-Anwendung zusammen:
+* Ein einmaliger, sorgfältig validierter Import von `protocols.json` in eine SQLite-Datenbank.
+* Vollständige Datenmodellierung inkl. zweier relationaler Tabellen (`protocols` und `sequences`) und der Abbildung einer hierarchischen Datenstruktur.
+* Umfassende UI-Elemente für Navigation, dynamische Filterung, Anzeige und Editierung der Protokolle.
+* Bereitgestellte API-Schnittstellen und technische Rahmenbedingungen, die einen reibungslosen Betrieb sowie zukünftige Erweiterungen garantieren.
+* Detaillierte Berücksichtigung aller kleiner und versteckter Details (z. B. Reihenfolge der Sequenznamen, Animationen, Validierung, responsive Darstellung), die für eine technisch einwandfreie Implementierung unabdingbar sind.
+
+----
+
+Hinweis: Diese Spezifikation integriert sowohl die unveränderten Vorgaben der ursprünglichen Anwendungsbeschreibung als auch alle notwendigen Ergänzungen und Ergänzungshinweise aus der detaillierten Analyse der `protocols.json`. Somit stellt dieses Dokument die Grundlage für eine vollständig fehlerfreie und erweiterbare Implementierung dar.
