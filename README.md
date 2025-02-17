@@ -146,7 +146,7 @@ Um die Anwendung über HTTPS bereitzustellen, nutze Certbot und konfiguriere Ngi
 
 2. **HTTPS-Zertifikat via Certbot anfordern:**
    ```bash
-   sudo certbot certonly --standalone --preferred-challenges http -d raspberrypi.deinedomain.tld --agree-tos -m deineemail@domain.de
+   sudo certbot certonly --standalone --preferred-challenges http -d raspberrypi.hyg6zkbn2mykr1go.myfritz.net --agree-tos -m deineemail@domain.de
    ```
 
 3. **Nginx als Reverse Proxy konfigurieren:**  
@@ -154,7 +154,7 @@ Um die Anwendung über HTTPS bereitzustellen, nutze Certbot und konfiguriere Ngi
    ```nginx
    server {
        listen 80;
-       server_name raspberrypi.deinedomain.tld;
+       server_name raspberrypi.hyg6zkbn2mykr1go.myfritz.net;
        return 301 https://$host$request_uri;
    }
 
@@ -162,8 +162,8 @@ Um die Anwendung über HTTPS bereitzustellen, nutze Certbot und konfiguriere Ngi
        listen 443 ssl;
        server_name raspberrypi.deinedomain.tld;
        
-       ssl_certificate /etc/letsencrypt/live/raspberrypi.deinedomain.tld/fullchain.pem;
-       ssl_certificate_key /etc/letsencrypt/live/raspberrypi.deinedomain.tld/privkey.pem;
+       ssl_certificate /etc/letsencrypt/live/raspberrypi.hyg6zkbn2mykr1go.myfritz.net/fullchain.pem;
+       ssl_certificate_key /etc/letsencrypt/live/raspberrypi.hyg6zkbn2mykr1go.myfritz.net/privkey.pem;
 
        location /api/ {
            proxy_pass http://localhost:5000/api/;
@@ -195,7 +195,7 @@ erreichbar.
 ## Aufrufen der Anwendung
 
 - **Im Browser:**  
-  Öffne die URL (z. B.) [https://raspberrypi.deinedomain.tld/](https://raspberrypi.deinedomain.tld/).  
+  Öffne die URL (z. B.) [raspberrypi.hyg6zkbn2mykr1go.myfritz.net/](https://raspberrypi.hyg6zkbn2mykr1go.myfritz.net/).  
   Die React-basierte Benutzeroberfläche wird angezeigt. Über die linke Navigation kannst du den gewünschten Protokolleintrag auswählen und bearbeiten.
 
 ---
