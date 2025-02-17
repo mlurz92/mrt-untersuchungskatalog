@@ -2,8 +2,8 @@
 
 Diese Anleitung beschreibt detailliert, wie du den **MRT Untersuchungskatalog** auf einem Raspberry Pi 4 mit einer frischen Installation von RaspberryPiOS lite (64bit) installierst, in Betrieb nimmst, aktualisierst und bei Bedarf vollständig entfernst. Die Anwendung besteht aus einem Python-Backend (Flask, SQLite) und einem React-Frontend (mit Animationen via GSAP, Drag‑&‑Drop via react‑beautiful‑dnd und API-Anbindung via Axios). Die Bereitstellung erfolgt über HTTPS (konfiguriert mit Certbot und Nginx).
 
-> **Hinweis:**  
-> Diese Anleitung setzt grundlegende Kenntnisse im Umgang mit der Kommandozeile sowie einen funktionierenden SSH-Zugang zu deinem Raspberry Pi voraus.
+> **Wichtig:**  
+> Aufgrund der systemseitigen Python-Konfiguration (externally-managed-environment gemäß [PEP 668](https://www.python.org/dev/peps/pep-0668/)) wird empfohlen, für das Backend eine virtuelle Umgebung zu erstellen. Die Python-Pakete werden somit isoliert installiert, ohne die Systeminstallation zu beeinflussen.
 
 ---
 
@@ -12,15 +12,14 @@ Diese Anleitung beschreibt detailliert, wie du den **MRT Untersuchungskatalog** 
 - [Systemvorbereitung](#systemvorbereitung)
 - [Installation der Anwendung](#installation-der-anwendung)
   - [1. Klonen des Repositories](#1-klonen-des-repositories)
-  - [2. Installation der Abhängigkeiten](#2-installation-der-abhängigkeiten)
-    - [Backend (Python)](#backend-python)
-    - [Frontend (Node.js & npm)](#frontend-nodejs--npm)
-  - [3. Einrichtung und Import der Datenbank](#3-einrichtung-und-import-der-datenbank)
-  - [4. Start der Backend-API und Frontend-Anwendung](#4-start-der-backend-api-und-frontend-anwendung)
-  - [5. HTTPS-Bereitstellung via Certbot und Nginx](#5-https-bereitstellung-via-certbot-und-nginx)
+  - [2. Einrichtung der virtuellen Python-Umgebung und Installation der Backend-Abhängigkeiten](#2-einrichtung-der-virtuellen-python-umgebung-und-installation-der-backend-abhängigkeiten)
+  - [3. Installation der Frontend-Abhängigkeiten](#3-installation-der-frontend-abhängigkeiten)
+  - [4. Einrichtung und Import der Datenbank](#4-einrichtung-und-import-der-datenbank)
+  - [5. Start der Backend-API und Frontend-Anwendung](#5-start-der-backend-api-und-frontend-anwendung)
+  - [6. HTTPS-Bereitstellung via Certbot und Nginx](#6-https-bereitstellung-via-certbot-und-nginx)
 - [Aufrufen der Anwendung](#aufrufen-der-anwendung)
 - [Update der Anwendung](#update-der-anwendung)
-- [Vollständige Entfernung der Anwendung](#vollständige-entfernung-der-anwendung-und-rücksetzung-des-raspberry-pi-os)
+- [Vollständige Entfernung der Anwendung und Rücksetzung des Raspberry Pi OS](#vollständige-entfernung-der-anwendung-und-rücksetzung-des-raspberry-pi-os)
 - [Problemlösungen und Hinweise](#problemlösungen-und-hinweise)
 
 ---
@@ -38,7 +37,7 @@ Diese Anleitung beschreibt detailliert, wie du den **MRT Untersuchungskatalog** 
      ```bash
      ssh pi@raspberrypi
      ```
-   - Standardbenutzer ist `pi` mit dem Passwort `raspberry` (bitte ändere das Passwort umgehend).
+   - Der Standardbenutzer ist `pi` mit dem Passwort `raspberry` (bitte ändere das Passwort umgehend).
 
 3. **Systemupdate durchführen:**
    ```bash
@@ -60,28 +59,34 @@ git clone https://github.com/mlurz92/mrt-untersuchungskatalog.git
 cd mrt-untersuchungskatalog
 ```
 
-### 2. Installation der Abhängigkeiten
+### 2. Einrichtung der virtuellen Python-Umgebung und Installation der Backend-Abhängigkeiten
 
-#### Backend (Python)
+Aufgrund des "externally-managed-environment"-Hinweises solltest du für das Python-Backend eine virtuelle Umgebung erstellen, um alle Pakete isoliert zu installieren:
 
-Stelle sicher, dass Python 3 und pip installiert sind. Installiere dann die benötigten Pakete:
+1. **Virtuelle Umgebung erstellen und aktivieren**  
+   Im Hauptverzeichnis des Projekts (`mrt-untersuchungskatalog`), wechsle in das `backend`-Verzeichnis und erstelle dort die virtuelle Umgebung:
+   ```bash
+   cd backend
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+   (Um die virtuelle Umgebung später zu verlassen, kannst du `deactivate` eingeben.)
 
-```bash
-sudo apt install python3 python3-pip -y
-cd backend
-pip3 install -r requirements.txt
-```
+2. **Upgrade von pip und Installation der Backend-Abhängigkeiten:**  
+   **Wichtig:** Da du dich bereits im `backend`-Verzeichnis befindest, verwendest du den relativen Pfad zur Datei `requirements.txt` ohne einen zusätzlichen Ordnernamen – also:
+   ```bash
+   pip install --upgrade pip
+   pip install -r requirements.txt
+   ```
+   Falls du Pakete systemweit installieren möchtest (was nicht empfohlen wird), kannst du alternativ den Schalter `--break-system-packages` verwenden:
+   ```bash
+   pip install --break-system-packages -r requirements.txt
+   ```
 
-*Hinweis:* In der Datei `backend/requirements.txt` stehen folgende Abhängigkeiten:
-```
-Flask==2.2.5
-flask-cors==3.0.10
-```
-
-#### Frontend (Node.js & npm)
+### 3. Installation der Frontend-Abhängigkeiten
 
 1. **Installation von Node.js:**  
-   Für eine stabile Node.js-Version auf dem Raspberry Pi wird die Installation über NodeSource empfohlen:
+   Für eine stabile Node.js-Version auf dem Raspberry Pi empfiehlt sich die Installation über NodeSource:
    ```bash
    curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
    sudo apt install -y nodejs
@@ -92,38 +97,37 @@ flask-cors==3.0.10
    cd ../frontend
    npm install
    ```
-   *Hinweis:* Neben React, Axios, GSAP und react‑scripts wird zusätzlich *react‑beautiful‑dnd* verwendet.
+   *Hinweis:* Neben React, Axios, GSAP und react‑beautiful‑dnd wird zusätzlich *react‑scripts* verwendet.
 
-### 3. Einrichtung und Import der Datenbank
+### 4. Einrichtung und Import der Datenbank
 
-Wechsle in das Backend-Verzeichnis und führe das Import-Skript aus, um die SQLite-Datenbank zu initialisieren und `protocols.json` zu importieren:
+Wechsle in das Backend-Verzeichnis (sicherstellen, dass die virtuelle Umgebung aktiv ist) und führe das Import-Skript aus, um die SQLite-Datenbank zu initialisieren und `protocols.json` zu importieren:
 
 ```bash
 cd ../backend
-python3 db.py
+python db.py
 ```
 
 Die Ausgabe sollte etwa Folgendes enthalten:  
 „Datenbank nicht gefunden. Starte Import aus 'protocols.json' …“  
 und danach „Datenbank erstellt und JSON-Daten erfolgreich importiert.“
 
-### 4. Start der Backend-API und Frontend-Anwendung
+### 5. Start der Backend-API und Frontend-Anwendung
 
 #### Backend API starten
 
-Starte die Flask-API:
+Starte die Flask-API (sicherstellen, dass die virtuelle Umgebung aktiviert ist):
 
 ```bash
 cd backend
-python3 app.py
+python app.py
 ```
 
 Die API läuft auf Port 5000.
 
 #### Frontend-Anwendung starten
 
-In einem separaten Terminal oder einer neuen SSH-Session:
-
+Öffne für den Frontend-Start ein weiteres Terminal (oder eine neue SSH-Session) und wechsle in den Frontend-Ordner:
 ```bash
 cd ~/mrt-untersuchungskatalog/frontend
 npm start
@@ -131,7 +135,7 @@ npm start
 
 Die React-Anwendung wird standardmäßig auf Port 3000 bereitgestellt ([http://localhost:3000](http://localhost:3000)).
 
-### 5. HTTPS-Bereitstellung via Certbot und Nginx
+### 6. HTTPS-Bereitstellung via Certbot und Nginx
 
 Um die Anwendung über HTTPS bereitzustellen, nutze Certbot und konfiguriere Nginx als Reverse Proxy.
 
@@ -150,16 +154,16 @@ Um die Anwendung über HTTPS bereitzustellen, nutze Certbot und konfiguriere Ngi
    ```nginx
    server {
        listen 80;
-       server_name raspberrypi.hyg6zkbn2mykr1go.myfritz.net/;
+       server_name raspberrypi.deinedomain.tld;
        return 301 https://$host$request_uri;
    }
 
    server {
        listen 443 ssl;
-       server_name raspberrypi.hyg6zkbn2mykr1go.myfritz.net;
+       server_name raspberrypi.deinedomain.tld;
        
-       ssl_certificate /etc/letsencrypt/live/raspberrypi.hyg6zkbn2mykr1go.myfritz.net/fullchain.pem;
-       ssl_certificate_key /etc/letsencrypt/live/raspberrypi.hyg6zkbn2mykr1go.myfritz.net/privkey.pem;
+       ssl_certificate /etc/letsencrypt/live/raspberrypi.deinedomain.tld/fullchain.pem;
+       ssl_certificate_key /etc/letsencrypt/live/raspberrypi.deinedomain.tld/privkey.pem;
 
        location /api/ {
            proxy_pass http://localhost:5000/api/;
@@ -183,7 +187,7 @@ Um die Anwendung über HTTPS bereitzustellen, nutze Certbot und konfiguriere Ngi
    ```
 
 Nach erfolgreichem Neustart ist die Anwendung unter der URL  
-**https://raspberrypi.hyg6zkbn2mykr1go.myfritz.net/**  
+**https://raspberrypi.deinedomain.tld/**  
 erreichbar.
 
 ---
@@ -191,7 +195,7 @@ erreichbar.
 ## Aufrufen der Anwendung
 
 - **Im Browser:**  
-  Öffne die URL (z. B.) [https://raspberrypi.hyg6zkbn2mykr1go.myfritz.net/](https://raspberrypi.hyg6zkbn2mykr1go.myfritz.net/).  
+  Öffne die URL (z. B.) [https://raspberrypi.deinedomain.tld/](https://raspberrypi.deinedomain.tld/).  
   Die React-basierte Benutzeroberfläche wird angezeigt. Über die linke Navigation kannst du den gewünschten Protokolleintrag auswählen und bearbeiten.
 
 ---
@@ -208,10 +212,10 @@ git pull
 
 Falls sich in den Abhängigkeiten etwas ändert:
 
-- Für das Backend:
+- Für das Backend (sicherstellen, dass die virtuelle Umgebung aktiviert ist):
   ```bash
   cd backend
-  pip3 install -r requirements.txt
+  pip install -r requirements.txt
   ```
 - Für das Frontend:
   ```bash
@@ -235,7 +239,7 @@ Starte anschließend beide Anwendungen neu.
      ```bash
      sudo apt remove nodejs -y
      ```
-   - Entferne Python-Abhängigkeiten ggf. über virtuelle Umgebungen.
+   - Entferne ggf. die virtuelle Umgebung, wenn diese separat erstellt wurde.
 
 3. **Nginx-Konfiguration entfernen (falls eingerichtet):**
    ```bash
@@ -252,7 +256,18 @@ Starte anschließend beide Anwendungen neu.
 ## Problemlösungen und Hinweise
 
 - **Datenbank-Fehler:**  
-  Stelle sicher, dass `protocols.db` im Backend-Verzeichnis korrekt angelegt wurde. Führe ggf. `python3 db.py` erneut aus.
+  Stelle sicher, dass `protocols.db` im Backend-Verzeichnis korrekt angelegt wurde. Führe ggf. `python db.py` (in der aktiven virtuellen Umgebung) erneut aus.
+
+- **Virtuelle Umgebung:**  
+  Achte darauf, dass du im Backend stets deine virtuelle Umgebung aktivierst (z. B. mit `source venv/bin/activate`), bevor du Python-Befehle ausführst.  
+  Falls du Pakete systemweit installieren möchtest (was nicht empfohlen ist), benutze alternativ den Schalter `--break-system-packages`.
+
+- **Pfadangaben:**  
+  **Wichtig:** Wenn du dich im `backend`-Verzeichnis befindest, installiere die Pakete mit:
+  ```bash
+  pip install -r requirements.txt
+  ```
+  und nicht mit `pip install -r backend/requirements.txt`, da letzterer Pfad nicht existiert und den Fehler "Could not open requirements" verursacht.
 
 - **Netzwerkprobleme:**  
   Vergewissere dich, dass alle benötigten Ports (5000, 3000, 80, 443) erreichbar sind.
@@ -275,10 +290,9 @@ Diese Anleitung fasst alle wesentlichen Schritte zusammen, um den MRT Untersuchu
 - Einen einmaligen Import der JSON-Daten in eine SQLite-Datenbank (über `db.py`).
 - Ein robustes Backend mit Flask, das alle CRUD-Operationen (einschließlich eines speziellen Endpunkts zur Aktualisierung der Sequenzliste) bereitstellt.
 - Ein modernes React-Frontend mit dynamischer Navigation, Suchfunktion, vollständiger Hierarchieanzeige und Drag‑&‑Drop-Unterstützung in den Bearbeitungsoverlays.
+- Die Verwendung einer virtuellen Python-Umgebung, um Konflikte im systemweiten Paketmanagement zu vermeiden (aufgrund des "externally managed environment").
 - Eine vollständige Integration von Animationen (via GSAP) und responsive Gestaltung (dunkles Farbschema, Roboto-Schrift).
 
-Bitte passe gegebenenfalls Domainnamen und E-Mail-Adressen in den Nginx- und Certbot-Konfigurationen an deine Gegebenheiten an.
+Bitte passe gegebenenfalls Domainnamen, E-Mail-Adressen und weitere Umgebungsvariablen in den Nginx- und Certbot-Konfigurationen an deine Gegebenheiten an.
 
 ---
-
-*Diese README.md wurde erstellt, um eine vollständige und reproduzierbare Installation, Nutzung und Wartung der Anwendung zu gewährleisten.*
